@@ -1,9 +1,104 @@
 header {
   padding: 10px;
-  color: #999;
   @include background;
   @include text_C;
   h1{
     @include titre1;
   }
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 30px 10px;
+  }
 }
+
+  /* *****************************************************************
+  HEADER
+  ***************************************************************** */
+  
+  /* DISPLAY */
+
+  
+  .navbar .nav {
+    display: flex;
+    flex-direction: row;
+  
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .navbar .logo {
+    display: flex;
+    flex-direction: row;
+  
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* IMAGE */
+  .navbar .adaptive-img--contain {
+    min-width: 150px;
+    height: 150px;
+  }
+  
+  /* PLACEMENT */
+  .navbar .nav li {
+    padding: 10px 20px;
+  }
+  
+  /* DECO */
+  .logo h3::before {
+    flex-direction: row;
+    content: "\2605 \00a0";
+    color: #950000;
+  }
+  
+  .logo h3::after {
+    flex-direction: row;
+    content: "\00a0 \2605";
+    color: #950000;
+  }
+  
+  .logo h3 {
+    font-family: "Athiti", sans-serif;
+    font-size: 25px;
+  }
+  
+  /* BOUTON */
+  .navbar .nav li {
+    background-color: #ebe3db;
+  }
+  
+  .navbar .nav li:hover {
+    background-color: #950000;
+    transition: 0.7s all;
+  }
+  
+  .navbar .nav li:hover a {
+    color: white;
+    transition: 0.7s all;
+  }
+  
+  .navbar .nav li:first-child {
+    background-color: #4c4343;
+  }
+  
+  .navbar .nav li:first-child a {
+    color: white;
+  }
+  
+  /* *** Responsive HEADER *** */
+  
+  @media screen and (max-width: 980px) {
+    header .menubar,
+    header .menubar .logo,
+    header .menubar .nav {
+      flex-direction: column;
+      text-align-last: center;
+    }
+  
+    header .menubar .nav li {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,52 @@
+@mixin background {
+  background-color: #444;
+}
+
+@mixin text_C {
+  text-align: center;
+}
+
+@mixin titre1 {
+  font-family: "Merienda", sans-serif;
+  font-size: 30px;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  font-size: 5rem;
+  text-align: center;
+}
+
+@mixin titre2 {
+  font-family: "Merienda", sans-serif;
+  font-size: 30px;
+  margin-bottom: 25px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  ::before {
+    content: "\2605 \00a0";
+    color: #950000;
+  }
+  ::after {
+    content: "\00a0 \2605";
+    color: #950000;
+  }
+}
+
+@mixin titre3 {
+  font-family: "Merienda", sans-serif;
+  font-size: 20px;
+  margin: 20px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin link {
+  text-decoration: none;
+  color: #dd5735;
+}
+
+@mixin linkhover {
+  text-decoration: underline;
+  color: #000;
+}

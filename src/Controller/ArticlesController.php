@@ -21,7 +21,7 @@ class ArticlesController extends AbstractController
         ]);
     }
 
-    #[Route('/new', name: 'app_articles_new', methods: ['GET', 'POST'])]
+    #[Route('/admin/new', name: 'app_articles_new', methods: ['GET', 'POST'])]
     public function new(Request $request, ArticlesRepository $articlesRepository): Response
     {
         $article = new Articles();
@@ -39,7 +39,7 @@ class ArticlesController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_articles_show', methods: ['GET'])]
+    #[Route('/admin/{id}', name: 'app_articles_show', methods: ['GET'])]
     public function show(Articles $article): Response
     {
         return $this->render('articles/show.html.twig', [
@@ -47,7 +47,7 @@ class ArticlesController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}/edit', name: 'app_articles_edit', methods: ['GET', 'POST'])]
+    #[Route('/admin/{id}/edit', name: 'app_articles_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Articles $article, ArticlesRepository $articlesRepository): Response
     {
         $form = $this->createForm(ArticlesType::class, $article);
@@ -64,7 +64,7 @@ class ArticlesController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_articles_delete', methods: ['POST'])]
+    #[Route('/admin/{id}', name: 'app_articles_delete', methods: ['POST'])]
     public function delete(Request $request, Articles $article, ArticlesRepository $articlesRepository): Response
     {
         if ($this->isCsrfTokenValid('delete'.$article->getId(), $request->request->get('_token'))) {

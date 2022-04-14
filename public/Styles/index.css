@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::after,
 ::before {
@@ -230,14 +231,39 @@ template {
   display: none;
 }
 
-body {
-  line-height: 1.5;
-  font-family: sans-serif;
-  background-color: #eee;
+/*
+  *****************************************************************
+  GENERALITIES
+  *****************************************************************
+  */
+*:not(head, table, tbody, tfoot, thead, tr, td, th, script),
+::after,
+::before,
+.carousel {
+  display: flex;
+  flex-direction: column;
 }
 
-.container {
-  max-width: 1100px;
+html {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+body {
+  font-family: "Athiti", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  overflow: auto;
+  background-color: #eee;
+}
+body .container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 32px;
   margin: 0 auto;
 }
 
@@ -245,23 +271,196 @@ a {
   text-decoration: none;
   color: #dd5735;
 }
-
-a:hover {
+a :hover {
   text-decoration: underline;
   color: #000;
 }
 
+section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Bouton */
+.bouton {
+  background-color: #7e4a7c;
+  max-width: 100px;
+  height: 50px;
+}
+.bouton a {
+  text-decoration: none;
+  color: #dd5735;
+  color: white;
+  font-size: 2rem;
+  padding: 15px;
+}
+
+li {
+  list-style: none;
+}
+
+.with-border-bottom {
+  position: relative;
+}
+.with-border-bottom ::after {
+  content: "";
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  border-bottom: 1.5px dashed black;
+}
+
+/* *****************************************************************
+  IMAGES
+  ***************************************************************** */
+*[class*=adaptive-img]:not(.carousel) {
+  position: relative;
+}
+
+*[class*=adaptive-img] > span,
+*[class*=adaptive-img] > span > img:not(.carousel) {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  border: none;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+*[class*=adaptive-img] > span {
+  margin: 0;
+  opacity: 1;
+  width: initial;
+  height: initial;
+  overflow: hidden;
+  background: none;
+}
+
+*[class*=adaptive-img] > span > img:not(.carousel) {
+  width: 0;
+  height: 0;
+  margin: auto;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.adaptive-img--cover > span > img {
+  object-fit: cover;
+}
+
+.adaptive-img--contain > span > img {
+  object-fit: contain;
+}
+
 header {
   padding: 10px;
-  color: #999;
   background-color: #444;
   text-align: center;
 }
 header h1 {
-  color: #c33;
-  font-size: 40px;
+  font-family: "Merienda", sans-serif;
+  font-size: 30px;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  font-size: 5rem;
+  text-align: center;
+}
+header .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 30px 10px;
 }
 
+/* *****************************************************************
+HEADER
+***************************************************************** */
+/* DISPLAY */
+.navbar .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+/* IMAGE */
+.navbar .adaptive-img--contain {
+  min-width: 150px;
+  height: 150px;
+}
+
+/* PLACEMENT */
+.navbar .nav li {
+  padding: 10px 20px;
+}
+
+/* DECO */
+.logo h3::before {
+  flex-direction: row;
+  content: "★ ";
+  color: #950000;
+}
+
+.logo h3::after {
+  flex-direction: row;
+  content: " ★";
+  color: #950000;
+}
+
+.logo h3 {
+  font-family: "Athiti", sans-serif;
+  font-size: 25px;
+}
+
+/* BOUTON */
+.navbar .nav li {
+  background-color: #ebe3db;
+}
+
+.navbar .nav li:hover {
+  background-color: #950000;
+  transition: 0.7s all;
+}
+
+.navbar .nav li:hover a {
+  color: white;
+  transition: 0.7s all;
+}
+
+.navbar .nav li:first-child {
+  background-color: #4c4343;
+}
+
+.navbar .nav li:first-child a {
+  color: white;
+}
+
+/* *** Responsive HEADER *** */
+@media screen and (max-width: 980px) {
+  header .menubar,
+header .menubar .logo,
+header .menubar .nav {
+    flex-direction: column;
+    text-align-last: center;
+  }
+
+  header .menubar .nav li {
+    width: 100%;
+  }
+}
 footer {
   padding: 20px;
   color: #fff;
@@ -273,18 +472,36 @@ main {
   color: #369;
 }
 main h1 {
-  color: #c33;
-  font-size: 40px;
+  font-family: "Merienda", sans-serif;
+  font-size: 30px;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+  font-size: 5rem;
+  text-align: center;
 }
 main h2 {
-  color: #a32929;
-  font-size: 32px;
-  padding: 30px 0;
+  font-family: "Merienda", sans-serif;
+  font-size: 30px;
+  margin-bottom: 25px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+main h2 ::before {
+  content: "★ ";
+  color: #950000;
+}
+main h2 ::after {
+  content: " ★";
+  color: #950000;
 }
 main h3 {
-  color: #7a1f1f;
-  font-size: 24px;
-  padding: 20px 0;
+  font-family: "Merienda", sans-serif;
+  font-size: 20px;
+  margin: 20px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
 }
 
 article {

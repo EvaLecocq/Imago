@@ -1,52 +1,127 @@
-@mixin background {
-  background-color: #444;
+@import "mixin";
+
+/*
+  *****************************************************************
+  GENERALITIES
+  *****************************************************************
+  */
+*:not(head, table, tbody, tfoot, thead, tr, td, th, script),
+::after,
+::before,
+.carousel {
+  display: flex;
+  flex-direction: column;
 }
 
-@mixin text_C {
-  text-align: center;
-}
-
-@mixin titre1 {
-  color: #c33;
-  font-size: 40px;
-}
-
-@mixin titre2 {
-  color: #a32929;
-  font-size: 32px;
-  padding: 30px 0;
-}
-
-@mixin titre3 {
-  color: #7a1f1f;
-  font-size: 24px;
-  padding: 20px 0;
-}
-
-@mixin link {
-  text-decoration: none;
-  color: #dd5735;
-}
-
-@mixin linkhover {
-  text-decoration: underline;
-  color: #000;
+html {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 body {
-  line-height: 1.5;
-  font-family: sans-serif;
+  font-family: "Athiti", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  overflow: auto;
   background-color: #eee;
-}
-
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
+  .container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 32px;
+    margin: 0 auto;
+    // max-width: 1100px;
+  }
 }
 
 a {
   @include link;
+  :hover {
+    @include linkhover;
+  }
 }
-a:hover {
-  @include linkhover;
+
+section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Bouton */
+.bouton {
+  background-color: #7e4a7c;
+  max-width: 100px;
+  height: 50px;
+  a {
+    @include link;
+    color: white;
+    font-size: 2rem;
+    padding: 15px;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+.with-border-bottom {
+  position: relative;
+  ::after {
+    content: "";
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    border-bottom: 1.5px dashed black;
+  }
+}
+
+/* *****************************************************************
+  IMAGES
+  ***************************************************************** */
+
+*[class*="adaptive-img"]:not(.carousel) {
+  position: relative;
+}
+
+*[class*="adaptive-img"] > span,
+*[class*="adaptive-img"] > span > img:not(.carousel) {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0;
+  border: none;
+  display: block;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+*[class*="adaptive-img"] > span {
+  margin: 0;
+  opacity: 1;
+  width: initial;
+  height: initial;
+  overflow: hidden;
+  background: none;
+}
+
+*[class*="adaptive-img"] > span > img:not(.carousel) {
+  width: 0;
+  height: 0;
+  margin: auto;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  max-height: 100%;
+}
+
+.adaptive-img--cover > span > img {
+  object-fit: cover;
+}
+
+.adaptive-img--contain > span > img {
+  object-fit: contain;
 }

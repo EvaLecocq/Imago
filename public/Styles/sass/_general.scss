@@ -1,0 +1,52 @@
+@mixin background {
+  background-color: #444;
+}
+
+@mixin text_C {
+  text-align: center;
+}
+
+@mixin titre1 {
+  color: #c33;
+  font-size: 40px;
+}
+
+@mixin titre2 {
+  color: #a32929;
+  font-size: 32px;
+  padding: 30px 0;
+}
+
+@mixin titre3 {
+  color: #7a1f1f;
+  font-size: 24px;
+  padding: 20px 0;
+}
+
+@mixin link {
+  text-decoration: none;
+  color: #dd5735;
+}
+
+@mixin linkhover {
+  text-decoration: underline;
+  color: #000;
+}
+
+body {
+  line-height: 1.5;
+  font-family: sans-serif;
+  background-color: #eee;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+a {
+  @include link;
+}
+a:hover {
+  @include linkhover;
+}

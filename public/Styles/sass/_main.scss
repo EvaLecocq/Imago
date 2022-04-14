@@ -1,9 +1,4 @@
-@mixin culumn {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding: 30px 0;
-}
+@import "mixin";
 
 main {
   color: #369;
@@ -32,23 +27,9 @@ p {
   padding-bottom: 10px;
 }
 
-.culumn {
-  @include culumn;
-  article {
-    flex: 1 40%;
-  }
-}
-
-.culumn2 {
-  @include culumn;
-  article {
-    flex: 1 25%;
-  }
-}
-
-.culumn3 {
-  @include culumn;
-  article {
-    flex: 1 16%;
+.adaptive-img--cover{
+  span{
+    width: auto;
+    height: 200px;
   }
 }

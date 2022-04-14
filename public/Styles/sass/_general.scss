@@ -56,7 +56,6 @@ section {
   height: 50px;
   a {
     @include link;
-    color: white;
     font-size: 2rem;
     padding: 15px;
   }
@@ -95,7 +94,7 @@ li {
   padding: 0;
   border: none;
   display: block;
-  position: absolute;
+  position: relative;
   box-sizing: border-box;
 }
 

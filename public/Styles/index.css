@@ -269,7 +269,7 @@ body .container {
 
 a {
   text-decoration: none;
-  color: #dd5735;
+  color: black;
 }
 a :hover {
   text-decoration: underline;
@@ -289,8 +289,7 @@ section {
 }
 .bouton a {
   text-decoration: none;
-  color: #dd5735;
-  color: white;
+  color: black;
   font-size: 2rem;
   padding: 15px;
 }
@@ -327,7 +326,7 @@ li {
   padding: 0;
   border: none;
   display: block;
-  position: absolute;
+  position: relative;
   box-sizing: border-box;
 }
 
@@ -518,34 +517,9 @@ p {
   padding-bottom: 10px;
 }
 
-.culumn {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding: 30px 0;
-}
-.culumn article {
-  flex: 1 40%;
-}
-
-.culumn2 {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding: 30px 0;
-}
-.culumn2 article {
-  flex: 1 25%;
-}
-
-.culumn3 {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  padding: 30px 0;
-}
-.culumn3 article {
-  flex: 1 16%;
+.adaptive-img--cover span {
+  width: auto;
+  height: 200px;
 }
 
 /*# sourceMappingURL=index.css.map */

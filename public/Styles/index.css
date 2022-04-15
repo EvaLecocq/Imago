@@ -357,109 +357,32 @@ li {
   object-fit: contain;
 }
 
-header {
-  padding: 10px;
-  background-color: #444;
-  text-align: center;
+.navbar {
+  position: relative;
+  z-index: 1;
+  background-color: antiquewhite;
+  top: 0;
+  left: 0;
+  flex: 1 100%;
+  padding: 24px;
+  overflow: auto;
 }
-header h1 {
-  font-family: "Merienda", sans-serif;
-  font-size: 30px;
-  margin-top: 5rem;
-  margin-bottom: 8rem;
-  font-size: 5rem;
-  text-align: center;
+.navbar:before {
+  z-index: 0;
+  content: "";
+  position: absolute;
+  transition: box-shadow 0.2s ease-out;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--green);
 }
-header .navbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 30px 10px;
-}
-
-/* *****************************************************************
-HEADER
-***************************************************************** */
-/* DISPLAY */
-.navbar .nav {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 15px;
+.navbar > * {
+  position: relative;
+  z-index: 2;
 }
 
-.navbar .logo {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-}
-
-/* IMAGE */
-.navbar .adaptive-img--contain {
-  min-width: 150px;
-  height: 150px;
-}
-
-/* PLACEMENT */
-.navbar .nav li {
-  padding: 10px 20px;
-}
-
-/* DECO */
-.logo h3::before {
-  flex-direction: row;
-  content: "★ ";
-  color: #950000;
-}
-
-.logo h3::after {
-  flex-direction: row;
-  content: " ★";
-  color: #950000;
-}
-
-.logo h3 {
-  font-family: "Athiti", sans-serif;
-  font-size: 25px;
-}
-
-/* BOUTON */
-.navbar .nav li {
-  background-color: #ebe3db;
-}
-
-.navbar .nav li:hover {
-  background-color: #950000;
-  transition: 0.7s all;
-}
-
-.navbar .nav li:hover a {
-  color: white;
-  transition: 0.7s all;
-}
-
-.navbar .nav li:first-child {
-  background-color: #4c4343;
-}
-
-.navbar .nav li:first-child a {
-  color: white;
-}
-
-/* *** Responsive HEADER *** */
-@media screen and (max-width: 980px) {
-  header .menubar,
-header .menubar .logo,
-header .menubar .nav {
-    flex-direction: column;
-    text-align-last: center;
-  }
-
-  header .menubar .nav li {
-    width: 100%;
-  }
-}
 footer {
   padding: 20px;
   color: #fff;
@@ -467,10 +390,12 @@ footer {
   text-align: center;
 }
 
-main {
-  color: #369;
+body {
+  position: relative;
+  z-index: 1;
+  flex: 1 0;
 }
-main h1 {
+body header h1 {
   font-family: "Merienda", sans-serif;
   font-size: 30px;
   margin-top: 5rem;
@@ -478,7 +403,7 @@ main h1 {
   font-size: 5rem;
   text-align: center;
 }
-main h2 {
+body h2 {
   font-family: "Merienda", sans-serif;
   font-size: 30px;
   margin-bottom: 25px;
@@ -486,31 +411,21 @@ main h2 {
   display: flex;
   flex-direction: row;
 }
-main h2 ::before {
+body h2 ::before {
   content: "★ ";
   color: #950000;
 }
-main h2 ::after {
+body h2 ::after {
   content: " ★";
   color: #950000;
 }
-main h3 {
+body h3 {
   font-family: "Merienda", sans-serif;
   font-size: 20px;
   margin: 20px 0;
   justify-content: center;
   display: flex;
   flex-direction: row;
-}
-
-article {
-  background-color: white;
-  padding: 20px;
-}
-
-section {
-  border: 2px solid #7a1f1f;
-  padding: 20px;
 }
 
 p {
@@ -520,6 +435,14 @@ p {
 .adaptive-img--cover span {
   width: auto;
   height: 200px;
+}
+
+.layout {
+  gap: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0 24px 200px 24px;
 }
 
 /*# sourceMappingURL=index.css.map */

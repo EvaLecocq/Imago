@@ -1,10 +1,14 @@
 @import "mixin";
 
-main {
-  color: #369;
-  h1 {
-    @include titre1;
+body {
+  header{
+    h1 {
+      @include titre1;
+    }
   }
+  position: relative;
+  z-index: 1;
+  flex: 1 0;
   h2 {
     @include titre2;
   }
@@ -13,23 +17,21 @@ main {
   }
 }
 
-article {
-  background-color: white;
-  padding: 20px;
-}
-
-section {
-  border: 2px solid #7a1f1f;
-  padding: 20px;
-}
-
 p {
   padding-bottom: 10px;
 }
 
-.adaptive-img--cover{
-  span{
+.adaptive-img--cover {
+  span {
     width: auto;
     height: 200px;
   }
+}
+
+.layout {
+  gap: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 0 24px 200px 24px;
 }

@@ -1,0 +1,9 @@
+.navbar {
+  @include posnav;
+  background-color: antiquewhite;
+  top: 0;
+  left: 0;
+  flex: 1 100%;
+  padding: 24px;
+  overflow: auto;
+}

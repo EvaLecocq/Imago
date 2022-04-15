@@ -383,6 +383,21 @@ li {
   z-index: 2;
 }
 
+.header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  position: fixed;
+  background: #1b1b1b;
+}
+.header .loading-bar {
+  height: 48px;
+  background: #6bff772a;
+  width: 0%;
+  border-radius: 3px;
+}
+
 footer {
   padding: 20px;
   color: #fff;

@@ -25,9 +25,7 @@
 
 					<td>
 						<a href="{{ path('app_articles_show', {'id': article.id}) }}">Ouvrir</a>
-						{% if app.admin != null and  app.admin == recipe.creator %}
-							<a href="{{ path('app_articles_edit', {'id': article.id}) }}">Editer</a>
-						{% endif %}
+						<a href="{{ path('app_articles_edit', {'id': article.id}) }}">Editer</a>
 					</td>
 				</tr>
 			{% else %}

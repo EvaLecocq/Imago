@@ -12,8 +12,8 @@
 				<!--<th>Id</th>-->
 				<th>Titre</th>
 				<th>Contenue</th>
+				<th>Catégorie</th>
 				<th>Date de création</th>
-				<!--<th>actions</th>-->
 			</tr>
 		</thead>
 		<tbody>
@@ -22,11 +22,13 @@
 					<td>{{ article.id }}</td>
 					<td>{{ article.title }}</td>
 					<td>{{ article.content }}</td>
+					<td>{{ article.category }}</td>
 					<td>{{ article.createdAt ? article.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+
 					<td>
 						<a href="{{ path('app_articles_show', {'id': article.id}) }}">Ouvrir</a>
 						{% if app.admin != null and  app.admin == recipe.creator %}
-						<a href="{{ path('app_articles_edit', {'id': article.id}) }}">Editer</a>
+							<a href="{{ path('app_articles_edit', {'id': article.id}) }}">Editer</a>
 						{% endif %}
 					</td>
 				</tr>

@@ -14,7 +14,6 @@ class ArticlesType extends AbstractType
         $builder
             ->add('title')
             ->add('content')
-            ->add('created_at')
         ;
     }
 

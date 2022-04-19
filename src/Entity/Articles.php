@@ -19,8 +19,10 @@ class Articles
     #[ORM\Column(type: 'text')]
     private $content;
 
-    #[ORM\Column(type: 'datetime_immutable')]
-    private $created_at;
+    #[ORM\ManyToOne(targetEntity: Category::class, inversedBy: 'articles')]
+    #[ORM\JoinColumn(nullable: false)]
+    private $category;
+
 
     public function getId(): ?int
     {
@@ -51,14 +53,14 @@ class Articles
         return $this;
     }
 
-    public function getCreatedAt(): ?\DateTimeImmutable
+    public function getCategory(): ?Category
     {
-        return $this->created_at;
+        return $this->category;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $created_at): self
+    public function setCategory(?Category $category): self
     {
-        $this->created_at = $created_at;
+        $this->category = $category;
 
         return $this;
     }

@@ -8,3 +8,13 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+src/Controller/CategoryCrudController.php
+src/Controller/CategoryCrudController.php
+src/Form/CategoryType.php
+templates/category_crud/_delete_form.html.twig
+templates/category_crud/_form.html.twig
+templates/category_crud/edit.html.twig
+templates/category_crud/new.html.twig
+templates/category_crud/index.html.twig
+templates/category_crud/index.html.twig
+templates/category_crud/show.html.twig

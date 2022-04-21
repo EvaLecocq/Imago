@@ -1,9 +1,59 @@
-.navbar {
-  @include posnav;
-  background-color: antiquewhite;
-  top: 0;
+.side-nav {
+  position: fixed;
+  height: 100vh;
   left: 0;
-  flex: 1 100%;
-  padding: 24px;
-  overflow: auto;
+  top: 0;
+  .wrapper {
+    background: #333;
+    height: 100vh;
+    width: 75px;
+    .nav-bloc {
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      cursor: pointer;
+      border-bottom: 1px solid #f2f2f21e;
+      svg {
+        width: 25px;
+        fill: #f2f2f2;
+        transition: 0.2s ease-in-out;
+        margin: 0 auto;
+      }
+      .sub-nav {
+        padding: 0px;
+        width: 200px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #333;
+        z-index: -1;
+        color: white;
+        transform: translateX(-100%);
+        transition: transform 0.2s ease-in-out;
+        border-right: 2px solid #000;
+        border-left: 2px solid #000;
+        h2 {
+          @include titre2;
+          align-items: center;
+        }
+      }
+
+      .sub-nav li {
+        padding: 15px 20px;
+        a {
+          color: #f2f2f2;
+          text-decoration: none;
+        }
+      }
+      .sub-nav li:hover {
+        background: rgba(160, 160, 160, 0.555);
+      }
+      
+    }
+    .nav-bloc:hover .sub-nav {
+      transform: translateX(75px);
+    }
+  }
 }
+

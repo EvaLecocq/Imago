@@ -3,17 +3,11 @@
 {% block title %}Imago
 {% endblock %}
 
-{% block body %}
-	<div>
-		<header>
-			<h1 class="main-title">Imago</h1>
-		</header>
-	</div>
-	<div class="container">
+{% block main %}
+	<main class="main-content">
+		<h1 class="main-title">Imago</h1>
+		<label class="date">{{ "now"|date("m/d/Y") }}</label>
 
-		<div>
-			<label class="date">{{ "now"|date("m/d/Y") }}</label>
-		</div>
 		<div>
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis blandit nibh. Donec luctus dui vitae tincidunt ultrices. Pellentesque id purus lorem. Mauris a congue tellus. Proin molestie enim eget tortor fermentum, hendrerit sollicitudin nulla mollis. Nunc lacinia sapien a eros hendrerit, ut dictum eros efficitur. Cras pharetra vehicula dapibus. Suspendisse potenti. Aliquam erat volutpat. Fusce ultricies porttitor diam. Duis at ullamcorper dui, in varius magna. Donec vitae tempor nibh. Suspendisse eget venenatis elit, a cursus tortor. Integer finibus ullamcorper hendrerit.</p>
 
@@ -45,8 +39,8 @@
 			</div>
 		</div>
 
-		<p>Vivamus porttitor lorem nec sapien tempor lobortis. Donec sit amet mi mi. Sed at dolor ut nulla feugiat euismod. Nam varius et mauris id consequat. Aenean accumsan arcu condimentum arcu auctor, vitae bibendum ipsum posuere. Integer in venenatis nulla, ac fringilla ipsum. Maecenas lobortis, sapien et hendrerit lobortis, tortor ligula pharetra massa, id commodo ligula velit vitae eros. Nunc sed porttitor turpis.
+		<p>
+			Vivamus porttitor lorem nec sapien tempor lobortis. Donec sit amet mi mi. Sed at dolor ut nulla feugiat euismod. Nam varius et mauris id consequat. Aenean accumsan arcu condimentum arcu auctor, vitae bibendum ipsum posuere. Integer in venenatis nulla, ac fringilla ipsum. Maecenas lobortis, sapien et hendrerit lobortis, tortor ligula pharetra massa, id commodo ligula velit vitae eros. Nunc sed porttitor turpis.
 		</p>
-
-	</div>
+	</main>
 {% endblock %}

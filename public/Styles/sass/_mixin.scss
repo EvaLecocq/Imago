@@ -8,10 +8,9 @@
 
 @mixin titre1 {
   font-family: "Merienda", sans-serif;
-  font-size: 30px;
+  font-size: 80px;
   margin-top: 5rem;
   margin-bottom: 8rem;
-  font-size: 5rem;
   text-align: center;
 }
 
@@ -22,14 +21,6 @@
   justify-content: center;
   display: flex;
   flex-direction: row;
-  ::before {
-    content: "\2605 \00a0";
-    color: #950000;
-  }
-  ::after {
-    content: "\00a0 \2605";
-    color: #950000;
-  }
 }
 
 @mixin titre3 {

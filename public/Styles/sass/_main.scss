@@ -1,37 +1,31 @@
 @import "mixin";
 
-body {
-  header{
-    h1 {
-      @include titre1;
-    }
+.main-content {
+  padding-left: 75px;
+  color: #f3f3f3;
+  h1 {
+    @include titre1;
   }
-  position: relative;
-  z-index: 1;
-  flex: 1 0;
   h2 {
     @include titre2;
   }
   h3 {
     @include titre3;
   }
-}
 
-p {
-  padding-bottom: 10px;
-}
-
-.adaptive-img--cover {
-  span {
-    width: auto;
-    height: 200px;
+  p,
+  label {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+    line-height: 1.7;
   }
-}
 
-.layout {
-  gap: 48px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  padding: 0 24px 200px 24px;
+  .adaptive-img--cover {
+    span {
+      max-width: 1000px;
+      height: 200px;
+      padding: 0 30px;
+    }
+  }
 }

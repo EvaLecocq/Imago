@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 ::after,
 ::before {
@@ -235,7 +234,7 @@ template {
   *****************************************************************
   GENERALITIES
   *****************************************************************
-  */
+*/
 *:not(head, table, tbody, tfoot, thead, tr, td, th, script),
 ::after,
 ::before,
@@ -258,7 +257,8 @@ body {
   font-size: 18px;
   font-style: normal;
   overflow: auto;
-  background-color: #eee;
+  position: relative;
+  background: #222;
 }
 body .container {
   width: 100%;
@@ -357,68 +357,80 @@ li {
   object-fit: contain;
 }
 
-.navbar {
-  position: relative;
-  z-index: 1;
-  background-color: antiquewhite;
-  top: 0;
-  left: 0;
-  flex: 1 100%;
-  padding: 24px;
-  overflow: auto;
-}
-.navbar:before {
-  z-index: 0;
-  content: "";
-  position: absolute;
-  transition: box-shadow 0.2s ease-out;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: 1px solid var(--green);
-}
-.navbar > * {
-  position: relative;
-  z-index: 2;
-}
-
-.header {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 48px;
+.side-nav {
   position: fixed;
-  background: #1b1b1b;
+  height: 100vh;
+  left: 0;
+  top: 0;
 }
-.header .loading-bar {
-  height: 48px;
-  background: #6bff772a;
-  width: 0%;
-  border-radius: 3px;
+.side-nav .wrapper {
+  background: #333;
+  height: 100vh;
+  width: 75px;
 }
-
-footer {
-  padding: 20px;
-  color: #fff;
-  background-color: #444;
-  text-align: center;
+.side-nav .wrapper .nav-bloc {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  border-bottom: 1px solid #f2f2f21e;
 }
-
-body {
-  position: relative;
-  z-index: 1;
-  flex: 1 0;
+.side-nav .wrapper .nav-bloc svg {
+  width: 25px;
+  fill: #f2f2f2;
+  transition: 0.2s ease-in-out;
+  margin: 0 auto;
 }
-body header h1 {
+.side-nav .wrapper .nav-bloc .sub-nav {
+  padding: 0px;
+  width: 200px;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #333;
+  z-index: -1;
+  color: white;
+  transform: translateX(-100%);
+  transition: transform 0.2s ease-in-out;
+  border-right: 2px solid #000;
+  border-left: 2px solid #000;
+}
+.side-nav .wrapper .nav-bloc .sub-nav h2 {
   font-family: "Merienda", sans-serif;
   font-size: 30px;
+  margin-bottom: 25px;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.side-nav .wrapper .nav-bloc .sub-nav li {
+  padding: 15px 20px;
+}
+.side-nav .wrapper .nav-bloc .sub-nav li a {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+.side-nav .wrapper .nav-bloc .sub-nav li:hover {
+  background: rgba(160, 160, 160, 0.555);
+}
+.side-nav .wrapper .nav-bloc:hover .sub-nav {
+  transform: translateX(75px);
+}
+
+.main-content {
+  padding-left: 75px;
+  color: #f3f3f3;
+}
+.main-content h1 {
+  font-family: "Merienda", sans-serif;
+  font-size: 80px;
   margin-top: 5rem;
   margin-bottom: 8rem;
-  font-size: 5rem;
   text-align: center;
 }
-body h2 {
+.main-content h2 {
   font-family: "Merienda", sans-serif;
   font-size: 30px;
   margin-bottom: 25px;
@@ -426,15 +438,7 @@ body h2 {
   display: flex;
   flex-direction: row;
 }
-body h2 ::before {
-  content: "★ ";
-  color: #950000;
-}
-body h2 ::after {
-  content: " ★";
-  color: #950000;
-}
-body h3 {
+.main-content h3 {
   font-family: "Merienda", sans-serif;
   font-size: 20px;
   margin: 20px 0;
@@ -442,22 +446,17 @@ body h3 {
   display: flex;
   flex-direction: row;
 }
-
-p {
-  padding-bottom: 10px;
+.main-content p,
+.main-content label {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 30px;
+  line-height: 1.7;
 }
-
-.adaptive-img--cover span {
-  width: auto;
+.main-content .adaptive-img--cover span {
+  max-width: 1000px;
   height: 200px;
-}
-
-.layout {
-  gap: 48px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  padding: 0 24px 200px 24px;
+  padding: 0 30px;
 }
 
 /*# sourceMappingURL=index.css.map */

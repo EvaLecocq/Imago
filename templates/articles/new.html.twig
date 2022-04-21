@@ -6,9 +6,9 @@
 {% block body %}
 	<h1>Créer un nouvel article</h1>
 
-	<!--{{ include('articles/_form.html.twig') }}-->
+	{{ include('articles/_form.html.twig') }}
 
-	<form name="articles" method="post">
+	{# <form name="articles" method="post">
 		<div id="articles">
 			<div>
 				<label for="articles_title" class="required">Titre</label>
@@ -26,7 +26,7 @@
 		<input type="hidden" id="articles__token" name="articles[_token]" value="fd350.BNcnvONs3dgiPu7veF9IhAZrfh0wbH2cRtxyErJ5dhg.Tu9Xz4wp6rxtSt2tDDR9zHMYSFlZKSWtd7UUU4MrOlYylHCIhA2agExIow">
 	</div>
 	<button class="btn">Enregistré</button>
-</form>
+</form> #}
 
 <a href="{{ path('app_articles_index') }}">Retour à la liste d'articles</a>
 {% endblock %}

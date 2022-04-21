@@ -14,11 +14,20 @@
   }
 
   p,
-  label {
+  a,
+  label,
+  table {
+    color: #f3f3f3;
     max-width: 1000px;
     margin: 0 auto;
     padding: 0 30px;
     line-height: 1.7;
+    td{
+      padding: 0 50px;
+      a{
+        padding: 0;
+      }
+    }
   }
 
   .adaptive-img--cover {

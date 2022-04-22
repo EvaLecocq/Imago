@@ -4,14 +4,13 @@
 {% endblock %}
 
 {% block main %}
+
 	<h1>Category index</h1>
 
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Id</th>
-				<th>Name</th>
-				<th>actions</th>
+				<th>Catégorie</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -26,11 +25,11 @@
 				</tr>
 			{% else %}
 				<tr>
-					<td colspan="3">no records found</td>
+					<td colspan="3">Aucune catégories trouvé</td>
 				</tr>
 			{% endfor %}
 		</tbody>
 	</table>
 
-	<a href="{{ path('app_category_new') }}">Create new</a>
+	<a href="{{ path('app_category_new') }}">Créer une nouvelle catégorie</a>
 {% endblock %}

@@ -7,7 +7,7 @@
 			{% endblock %}
 		</title>
 		<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>"/>
-		<link href="{{ asset('styles/index.css') }}"  rel="stylesheet"/>
+		<link href="{{ asset('styles/index.css') }}" rel="stylesheet"/>
 
 		{% block stylesheets %}
 			{{ encore_entry_link_tags('app') }}
@@ -32,13 +32,10 @@
 					</svg>
 					<div class="sub-nav">
 						<h2>
-							<a class="nav-link" href="/articles">Articles</a>
+							Articles
 						</h2>
 						<ul>
-							<li><a>Link</a></li>
-							<li><a>Link</a></li>
-							<li><a>Link</a></li>
-							<li><a>Link</a></li>
+							<li><a class="nav-link" href="/articles">Tous les articles</a></li>
 							<li><a>Link</a></li>
 							<li><a>Link</a></li>
 						</ul>

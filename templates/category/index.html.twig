@@ -4,32 +4,25 @@
 {% endblock %}
 
 {% block main %}
+	<main class="main-content">
 
-	<h1>Category index</h1>
+		<h1>Catégories</h1>
 
-	<table class="table">
-		<thead>
-			<tr>
-				<th>Catégorie</th>
-			</tr>
-		</thead>
-		<tbody>
+		<table class="table">
 			{% for category in categories %}
 				<tr>
-					{#<td>{{ category.id }}</td>#}
 					<td>{{ category.name }}</td>
-					<td>
-						<a href="{{ path('app_category_show', {'id': category.id}) }}">Ouvrir</a>                        
-						{#<a href="{{ path('app_category_edit', {'id': category.id}) }}">edit</a>#}
-					</td>
+					{% if is_granted("ROLE_ADMIN")%}
+						<td>{{ include('category/_delete_form.html.twig') }}</td>
+					{% endif %}
 				</tr>
 			{% else %}
 				<tr>
 					<td colspan="3">Aucune catégories trouvé</td>
 				</tr>
 			{% endfor %}
-		</tbody>
-	</table>
-
-	<a href="{{ path('app_category_new') }}">Créer une nouvelle catégorie</a>
-{% endblock %}
+		</table>
+		<a href="{{ path('app_category_new') }}">
+			Créer une nouvelle catégorie</a>
+		<main>
+		{% endblock %}

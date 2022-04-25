@@ -1,6 +1,6 @@
 @import "mixin";
 
-.main-content {
+.content {
   padding-left: 75px;
   color: #f3f3f3;
   h1 {
@@ -30,11 +30,36 @@
     }
   }
 
+  .images {
+    flex-direction: row;
+  }
+
   .adaptive-img--cover {
+    flex: 1 0;
+    padding: 40px 0;
     span {
-      max-width: 1000px;
-      height: 200px;
+      height: 300px;
       padding: 0 30px;
+    }
+  }
+}
+
+.article--index{
+  div{
+    border: dashed #3fff00;
+    margin: 0 20px;
+    .article--title{
+      flex-direction: row;
+      span{
+        flex: 1 0;
+        padding: 100px;
+        margin: 10px;
+        background-color: #f3f3f3;
+        color: black;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+      }
     }
   }
 }

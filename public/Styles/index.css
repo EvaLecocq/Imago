@@ -365,8 +365,43 @@ li {
 }
 .side-nav .wrapper {
   background: #333;
-  height: 100vh;
+  height: 100%;
   width: 75px;
+}
+.side-nav .wrapper .tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.side-nav .wrapper .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 25%;
+  /* left: 50%; */
+  margin-left: 60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.side-nav .wrapper .tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent #555 transparent transparent;
+}
+.side-nav .wrapper .tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 .side-nav .wrapper .nav-bloc {
   padding: 20px 0;
@@ -375,8 +410,8 @@ li {
   border-bottom: 1px solid #f2f2f21e;
 }
 .side-nav .wrapper .nav-bloc .svg-icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 .side-nav .wrapper .nav-bloc .svg-icon path,
 .side-nav .wrapper .nav-bloc .svg-icon polygon,
@@ -386,40 +421,6 @@ li {
 .side-nav .wrapper .nav-bloc .svg-icon circle {
   stroke: #ffffff;
   stroke-width: 1;
-}
-.side-nav .wrapper .nav-bloc .sub-nav {
-  padding: 0px;
-  width: 200px;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #333;
-  z-index: -1;
-  color: white;
-  transform: translateX(-100%);
-  transition: transform 0.2s ease-in-out;
-  border-right: 2px solid #000;
-  border-left: 2px solid #000;
-}
-.side-nav .wrapper .nav-bloc .sub-nav h2 {
-  font-family: "Merienda", sans-serif;
-  font-size: 30px;
-  margin-bottom: 25px;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.side-nav .wrapper .nav-bloc .sub-nav li {
-  padding: 15px 20px;
-}
-.side-nav .wrapper .nav-bloc .sub-nav li a {
-  color: #f2f2f2;
-  text-decoration: none;
-}
-.side-nav .wrapper .nav-bloc .sub-nav li:hover {
-  background: rgba(160, 160, 160, 0.555);
 }
 .side-nav .wrapper .nav-bloc:hover .sub-nav {
   transform: translateX(75px);
@@ -447,18 +448,18 @@ li {
   stroke-width: 1;
 }
 
-.main-content {
+.content {
   padding-left: 75px;
   color: #f3f3f3;
 }
-.main-content h1 {
+.content h1 {
   font-family: "Merienda", sans-serif;
   font-size: 80px;
   margin-top: 5rem;
   margin-bottom: 8rem;
   text-align: center;
 }
-.main-content h2 {
+.content h2 {
   font-family: "Merienda", sans-serif;
   font-size: 30px;
   margin-bottom: 25px;
@@ -466,7 +467,7 @@ li {
   display: flex;
   flex-direction: row;
 }
-.main-content h3 {
+.content h3 {
   font-family: "Merienda", sans-serif;
   font-size: 20px;
   margin: 20px 0;
@@ -474,32 +475,56 @@ li {
   display: flex;
   flex-direction: row;
 }
-.main-content p,
-.main-content a,
-.main-content label,
-.main-content table {
+.content p,
+.content a,
+.content label,
+.content table {
   color: #f3f3f3;
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 30px;
   line-height: 1.7;
 }
-.main-content p td,
-.main-content a td,
-.main-content label td,
-.main-content table td {
+.content p td,
+.content a td,
+.content label td,
+.content table td {
   padding: 0 50px;
 }
-.main-content p td a,
-.main-content a td a,
-.main-content label td a,
-.main-content table td a {
+.content p td a,
+.content a td a,
+.content label td a,
+.content table td a {
   padding: 0;
 }
-.main-content .adaptive-img--cover span {
-  max-width: 1000px;
-  height: 200px;
+.content .images {
+  flex-direction: row;
+}
+.content .adaptive-img--cover {
+  flex: 1 0;
+  padding: 40px 0;
+}
+.content .adaptive-img--cover span {
+  height: 300px;
   padding: 0 30px;
+}
+
+.article--index div {
+  border: dashed #3fff00;
+  margin: 0 20px;
+}
+.article--index div .article--title {
+  flex-direction: row;
+}
+.article--index div .article--title span {
+  flex: 1 0;
+  padding: 100px;
+  margin: 10px;
+  background-color: #f3f3f3;
+  color: black;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

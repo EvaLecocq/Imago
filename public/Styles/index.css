@@ -370,16 +370,22 @@ li {
 }
 .side-nav .wrapper .nav-bloc {
   padding: 20px 0;
-  display: flex;
-  justify-content: center;
+  align-self: center;
   cursor: pointer;
   border-bottom: 1px solid #f2f2f21e;
 }
-.side-nav .wrapper .nav-bloc svg {
-  width: 25px;
-  fill: #f2f2f2;
-  transition: 0.2s ease-in-out;
-  margin: 0 auto;
+.side-nav .wrapper .nav-bloc .svg-icon {
+  width: 40px;
+  height: 40px;
+}
+.side-nav .wrapper .nav-bloc .svg-icon path,
+.side-nav .wrapper .nav-bloc .svg-icon polygon,
+.side-nav .wrapper .nav-bloc .svg-icon rect {
+  fill: #ffffff;
+}
+.side-nav .wrapper .nav-bloc .svg-icon circle {
+  stroke: #ffffff;
+  stroke-width: 1;
 }
 .side-nav .wrapper .nav-bloc .sub-nav {
   padding: 0px;
@@ -417,6 +423,28 @@ li {
 }
 .side-nav .wrapper .nav-bloc:hover .sub-nav {
   transform: translateX(75px);
+}
+
+.footer {
+  margin-top: 50px;
+}
+.footer div {
+  flex-direction: row;
+  justify-content: flex-end;
+  margin: 0 10px;
+}
+.footer div .svg-icon {
+  width: 30px;
+  height: 30px;
+}
+.footer div .svg-icon path,
+.footer div .svg-icon polygon,
+.footer div .svg-icon rect {
+  fill: #ffffff;
+}
+.footer div .svg-icon circle {
+  stroke: #ffffff;
+  stroke-width: 1;
 }
 
 .main-content {

@@ -6,7 +6,15 @@
   text-align: center;
 }
 
-@mixin titre1 {
+@mixin title1 {
+  font-family: "Merienda", sans-serif;
+  font-size: 15rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@mixin title2 {
   font-family: "Merienda", sans-serif;
   font-size: 80px;
   margin-top: 5rem;
@@ -14,7 +22,7 @@
   text-align: center;
 }
 
-@mixin titre2 {
+@mixin title3 {
   font-family: "Merienda", sans-serif;
   font-size: 30px;
   margin-bottom: 25px;
@@ -23,13 +31,18 @@
   flex-direction: row;
 }
 
-@mixin titre3 {
+@mixin title4 {
   font-family: "Merienda", sans-serif;
   font-size: 20px;
   margin: 20px 0;
   justify-content: center;
   display: flex;
   flex-direction: row;
+}
+
+@mixin paragraph {
+  color: #f3f3f3;
+  line-height: 1.7;
 }
 
 @mixin link {

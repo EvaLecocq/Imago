@@ -1,3 +1,32 @@
-header {
- 
+@import "mixin";
+
+.header {
+  margin-bottom: 12rem;
+  .header--title {
+    @include title1;
+
+    color: transparent;
+    background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+    background-position: 40% 50%;
+    -webkit-background-clip: text;
+    position:relative;
+    text-align:center;
+  }
+  .header--p {
+    text-align: right;
+    margin-left: 30%;
+  }
+  .header--title__background {
+    @include title1;
+    position: absolute;
+    left: 250px;
+    bottom: 150px;
+    color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+  }
+  .header--title__up {
+	font-size: 12px;
+	letter-spacing: 0.5rem;
+	text-transform: uppercase;
+  }
 }

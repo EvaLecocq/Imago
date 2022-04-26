@@ -1,37 +1,28 @@
 @import "mixin";
 
 .content {
-  padding-left: 75px;
-  color: #f3f3f3;
-  h1 {
-    @include titre1;
+  .header--title__up{
+    margin: auto;
   }
+  padding: 0 10rem 0 15rem;
   h2 {
-    @include titre2;
+    @include title2;
   }
   h3 {
-    @include titre3;
+    @include title3;
   }
 
-  p,
-  a,
-  label,
-  table {
-    color: #f3f3f3;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 30px;
-    line-height: 1.7;
-    td{
-      padding: 0 50px;
-      a{
-        padding: 0;
-      }
+  .index--text, p {
+    @include paragraph;
+    margin-bottom: 1rem;
+    a {
+      padding: 0;
     }
   }
 
   .images {
     flex-direction: row;
+    gap: 5rem;
   }
 
   .adaptive-img--cover {
@@ -39,18 +30,17 @@
     padding: 40px 0;
     span {
       height: 300px;
-      padding: 0 30px;
     }
   }
 }
 
-.article--index{
-  div{
+.article--index {
+  div {
     border: dashed #3fff00;
     margin: 0 20px;
-    .article--title{
+    .article--title {
       flex-direction: row;
-      span{
+      span {
         flex: 1 0;
         padding: 100px;
         margin: 10px;

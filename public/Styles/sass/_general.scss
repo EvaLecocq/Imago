@@ -8,10 +8,12 @@
 
 *:not(head, table, tbody, tfoot, thead, tr, td, th, script),
 ::after,
-::before,
-.carousel {
+::before {
   display: flex;
   flex-direction: column;
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 html {

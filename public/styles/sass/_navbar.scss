@@ -6,7 +6,7 @@
   .wrapper {
     background: #333;
     height: 100%;
-    width: 75px;
+    width: 5rem;
 
     .tooltip {
       position: relative;
@@ -69,7 +69,7 @@
       }
     }
     .nav-bloc:hover .sub-nav {
-      transform: translateX(75px);
+      transform: translateX(5rem);
     }
   }
 }

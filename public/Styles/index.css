@@ -1,235 +1,3 @@
-*,
-::after,
-::before {
-  box-sizing: inherit;
-  padding: 0;
-  margin: 0;
-}
-
-html {
-  line-height: 1.15;
-  box-sizing: border-box;
-  font-family: sans-serif;
-}
-
-main {
-  display: block;
-}
-
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
-a {
-  background-color: transparent;
-}
-
-abbr[title] {
-  -webkit-text-decoration: underline dotted;
-  text-decoration: underline dotted;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  line-height: inherit;
-  border: 1px solid currentColor;
-}
-
-button {
-  overflow: visible;
-  text-transform: none;
-}
-
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
-  padding: 1px 6px;
-}
-
-input {
-  overflow: visible;
-}
-
-input,
-textarea {
-  padding: 1px;
-}
-
-legend {
-  color: inherit;
-  display: table;
-  max-width: 100%;
-  white-space: normal;
-}
-
-progress {
-  display: inline-block;
-  vertical-align: baseline;
-}
-
-select {
-  text-transform: none;
-}
-
-textarea {
-  overflow: auto;
-  vertical-align: top;
-}
-
-[type=search] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-}
-
-[type=color] {
-  background: inherit;
-}
-
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-::-webkit-input-placeholder {
-  color: inherit;
-  opacity: 0.5;
-}
-
-::-webkit-file-upload-button,
-::-webkit-search-decoration {
-  -webkit-appearance: button;
-  font: inherit;
-}
-
-::-moz-focus-inner {
-  border: 0;
-}
-
-:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
-
-:-moz-ui-invalid {
-  box-shadow: none;
-}
-
-hr {
-  box-sizing: content-box;
-  height: 0;
-  color: inherit;
-  overflow: visible;
-}
-
-dl dl,
-dl ol,
-dl ul,
-ol dl,
-ol ol,
-ol ul,
-ul dl,
-ul ol,
-ul ul {
-  margin: 0;
-}
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-audio,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-img {
-  border: 0;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-table {
-  text-indent: 0;
-  border-color: inherit;
-}
-
-details {
-  display: block;
-}
-
-dialog {
-  background-color: inherit;
-  border: solid;
-  color: inherit;
-  display: block;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  left: 0;
-  margin: auto;
-  padding: 1em;
-  position: absolute;
-  right: 0;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-dialog:not([open]) {
-  display: none;
-}
-
-summary {
-  display: list-item;
-}
-
-canvas {
-  display: inline-block;
-}
-
-template {
-  display: none;
-}
-
-[hidden] {
-  display: none;
-}
-
 /*
   *****************************************************************
   GENERALITIES
@@ -237,10 +5,12 @@ template {
 */
 *:not(head, table, tbody, tfoot, thead, tr, td, th, script),
 ::after,
-::before,
-.carousel {
+::before {
   display: flex;
   flex-direction: column;
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 html {
@@ -366,7 +136,7 @@ li {
 .side-nav .wrapper {
   background: #333;
   height: 100%;
-  width: 75px;
+  width: 5rem;
 }
 .side-nav .wrapper .tooltip {
   position: relative;
@@ -423,7 +193,45 @@ li {
   stroke-width: 1;
 }
 .side-nav .wrapper .nav-bloc:hover .sub-nav {
-  transform: translateX(75px);
+  transform: translateX(5rem);
+}
+
+.header {
+  margin-bottom: 12rem;
+}
+.header .header--title {
+  font-family: "Merienda", sans-serif;
+  font-size: 15rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: transparent;
+  background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  position: relative;
+  text-align: center;
+}
+.header .header--p {
+  text-align: right;
+  margin-left: 30%;
+}
+.header .header--title__background {
+  font-family: "Merienda", sans-serif;
+  font-size: 15rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: absolute;
+  left: 250px;
+  bottom: 150px;
+  color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+.header .header--title__up {
+  font-size: 12px;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
 }
 
 .footer {
@@ -449,17 +257,19 @@ li {
 }
 
 .content {
-  padding-left: 75px;
-  color: #f3f3f3;
+  padding: 0 10rem 0 15rem;
 }
-.content h1 {
+.content .header--title__up {
+  margin: auto;
+}
+.content h2 {
   font-family: "Merienda", sans-serif;
   font-size: 80px;
   margin-top: 5rem;
   margin-bottom: 8rem;
   text-align: center;
 }
-.content h2 {
+.content h3 {
   font-family: "Merienda", sans-serif;
   font-size: 30px;
   margin-bottom: 25px;
@@ -467,38 +277,17 @@ li {
   display: flex;
   flex-direction: row;
 }
-.content h3 {
-  font-family: "Merienda", sans-serif;
-  font-size: 20px;
-  margin: 20px 0;
-  justify-content: center;
-  display: flex;
-  flex-direction: row;
-}
-.content p,
-.content a,
-.content label,
-.content table {
+.content .index--text, .content p {
   color: #f3f3f3;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 30px;
   line-height: 1.7;
+  margin-bottom: 1rem;
 }
-.content p td,
-.content a td,
-.content label td,
-.content table td {
-  padding: 0 50px;
-}
-.content p td a,
-.content a td a,
-.content label td a,
-.content table td a {
+.content .index--text a, .content p a {
   padding: 0;
 }
 .content .images {
   flex-direction: row;
+  gap: 5rem;
 }
 .content .adaptive-img--cover {
   flex: 1 0;
@@ -506,7 +295,6 @@ li {
 }
 .content .adaptive-img--cover span {
   height: 300px;
-  padding: 0 30px;
 }
 
 .article--index div {

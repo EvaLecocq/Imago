@@ -4,7 +4,13 @@
     flex-direction: row;
     justify-content: flex-end;
     margin: 0 10px;
-    
+    @include paragraph;
+
+    .svg-icon:hover {
+      fill: red; /* pour bien voir le test */
+      opacity: 1;
+    }
+
     .svg-icon {
       width: 30px;
       height: 30px;

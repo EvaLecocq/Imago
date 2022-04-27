@@ -33,11 +33,13 @@ body {
   position: relative;
   background: #222;
   .container {
-    width: 100%;
-    max-width: 1400px;
-    padding: 0 32px;
+  padding: 0 10rem;
     margin: 0 auto;
   }
+}
+
+.flex-container {
+  flex-direction: initial;
 }
 
 a {

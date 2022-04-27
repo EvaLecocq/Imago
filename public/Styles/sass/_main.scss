@@ -1,10 +1,10 @@
 @import "mixin";
 
-.content {
-  .header--title__up{
+main {
+  flex: 95%;
+  .header--title__up {
     margin: auto;
   }
-  padding: 0 10rem 0 15rem;
   h2 {
     @include title2;
   }
@@ -12,7 +12,8 @@
     @include title3;
   }
 
-  .index--text, p {
+  .index--text,
+  p {
     @include paragraph;
     margin-bottom: 1rem;
     a {

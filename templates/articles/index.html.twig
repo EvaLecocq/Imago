@@ -3,8 +3,8 @@
 {% block title %}Imago - Articles
 {% endblock %}
 
-{% block main %}
-	<main class="content">
+{% block body %}
+	<main class="container">
 
 		<h1>Articles</h1>
 
@@ -64,5 +64,5 @@
 			<a href="{{ path('app_articles_new') }}">Ajouter un nouveau article</a>
 			<a href="{{ path('app_category_index') }}">Ajouter une nouvelle Catégorie</a>
 		{% endif %}
-		<main>
-		{% endblock %}
+	<main>
+{% endblock %}

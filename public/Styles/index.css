@@ -31,10 +31,12 @@ body {
   background: #222;
 }
 body .container {
-  width: 100%;
-  max-width: 1400px;
-  padding: 0 32px;
+  padding: 0 10rem;
   margin: 0 auto;
+}
+
+.flex-container {
+  flex-direction: initial;
 }
 
 a {
@@ -128,15 +130,15 @@ li {
 }
 
 .side-nav {
-  position: fixed;
-  height: 100vh;
+  flex: 5%;
+  height: 100%;
   left: 0;
   top: 0;
+  z-index: 2;
 }
 .side-nav .wrapper {
   background: #333;
   height: 100%;
-  width: 5rem;
 }
 .side-nav .wrapper .tooltip {
   position: relative;
@@ -179,21 +181,15 @@ li {
   cursor: pointer;
   border-bottom: 1px solid #f2f2f21e;
 }
-.side-nav .wrapper .nav-bloc .svg-icon {
+.side-nav .wrapper .nav-bloc .logo {
+  width: 50px;
+  height: auto;
+}
+.side-nav .wrapper .nav-bloc .svg-icon,
+.side-nav .wrapper .nav-bloc .svg-icon path {
   width: 30px;
   height: 30px;
-}
-.side-nav .wrapper .nav-bloc .svg-icon path,
-.side-nav .wrapper .nav-bloc .svg-icon polygon,
-.side-nav .wrapper .nav-bloc .svg-icon rect {
   fill: #ffffff;
-}
-.side-nav .wrapper .nav-bloc .svg-icon circle {
-  stroke: #ffffff;
-  stroke-width: 1;
-}
-.side-nav .wrapper .nav-bloc:hover .sub-nav {
-  transform: translateX(5rem);
 }
 
 .header {
@@ -225,7 +221,7 @@ li {
   position: absolute;
   left: 250px;
   bottom: 150px;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.2);
   z-index: -1;
 }
 .header .header--title__up {
@@ -241,6 +237,13 @@ li {
   flex-direction: row;
   justify-content: flex-end;
   margin: 0 10px;
+  color: #f3f3f3;
+  line-height: 1.7;
+}
+.footer div .svg-icon:hover {
+  fill: red;
+  /* pour bien voir le test */
+  opacity: 1;
 }
 .footer div .svg-icon {
   width: 30px;
@@ -256,20 +259,20 @@ li {
   stroke-width: 1;
 }
 
-.content {
-  padding: 0 10rem 0 15rem;
+main {
+  flex: 95%;
 }
-.content .header--title__up {
+main .header--title__up {
   margin: auto;
 }
-.content h2 {
+main h2 {
   font-family: "Merienda", sans-serif;
   font-size: 80px;
   margin-top: 5rem;
   margin-bottom: 8rem;
   text-align: center;
 }
-.content h3 {
+main h3 {
   font-family: "Merienda", sans-serif;
   font-size: 30px;
   margin-bottom: 25px;
@@ -277,23 +280,25 @@ li {
   display: flex;
   flex-direction: row;
 }
-.content .index--text, .content p {
+main .index--text,
+main p {
   color: #f3f3f3;
   line-height: 1.7;
   margin-bottom: 1rem;
 }
-.content .index--text a, .content p a {
+main .index--text a,
+main p a {
   padding: 0;
 }
-.content .images {
+main .images {
   flex-direction: row;
   gap: 5rem;
 }
-.content .adaptive-img--cover {
+main .adaptive-img--cover {
   flex: 1 0;
   padding: 40px 0;
 }
-.content .adaptive-img--cover span {
+main .adaptive-img--cover span {
   height: 300px;
 }
 

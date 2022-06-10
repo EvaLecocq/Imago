@@ -1,7 +1,7 @@
 @import "mixin";
 
 main {
-  flex: 95%;
+  padding-left: 4rem;
   .header--title__up {
     margin: auto;
   }
@@ -37,6 +37,7 @@ main {
 
 .article--index {
   div {
+    color:#f3f3f3;
     border: dashed #3fff00;
     margin: 0 20px;
     .article--title {

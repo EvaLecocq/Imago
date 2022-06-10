@@ -38,10 +38,6 @@ body {
   }
 }
 
-.flex-container {
-  flex-direction: initial;
-}
-
 a {
   @include link;
   :hover {

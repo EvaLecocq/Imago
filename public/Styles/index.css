@@ -314,31 +314,90 @@ main .adaptive-img--cover span {
 }
 
 .login {
-  color: white;
-  margin-bottom: 15px;
-  padding: 10px;
+  color: #ebecf0;
 }
 .login h1 {
   padding: 70px 0px;
 }
-.login legend {
-  padding: 10px 3px;
-  font-weight: bold;
-  font-variant: small-caps;
-}
-.login label {
-  margin: 6px;
-}
-.login .checkbox label {
-  flex-direction: row;
-  align-items: center;
-  gap: 0.5em;
-}
-.login input {
-  width: 249px;
-}
 .login input[type=checkbox] {
   width: 20px;
+}
+.login form {
+  padding: 16px;
+  width: 320px;
+  margin: 0 auto;
+}
+.login button,
+.login input {
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 320px;
+  padding: 16px;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+}
+.login label {
+  margin: 2em 0em 1em;
+}
+.login input {
+  margin-right: 8px;
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+.login input:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.login button {
+  color: #61677c;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+  width: fit-content;
+  align-self: center;
+}
+.login button:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+.login button:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+.login button .icon {
+  margin-right: 8px;
+}
+.login button.unit {
+  border-radius: 8px;
+  line-height: 0;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 8px;
+  font-size: 19.2px;
+}
+.login button.unit .icon {
+  margin-right: 0;
+}
+.login button.red {
+  display: block;
+  width: 100%;
+  color: #ae1100;
+}
+.login .input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.login .input-group label {
+  margin: 0;
+  flex: 1;
 }
 
 /*# sourceMappingURL=index.css.map */

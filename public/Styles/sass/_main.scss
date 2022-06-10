@@ -57,37 +57,113 @@ main {
 }
 
 .login {
-  color: white;
-  margin-bottom: 15px;
-  padding: 10px;
+  $ruler: 16px;
+  $color-red: #ae1100;
+  $color-bg: #ebecf0;
+  $color-shadow: #babecc;
+  $color-white: #fff;
 
-  h1{
+  color: $color-bg;
+
+  h1 {
     padding: 70px 0px;
-  }
-
-  legend {
-    padding: 10px 3px;
-    font-weight: bold;
-    font-variant: small-caps;
-  }
-
-  label {
-    margin: 6px;
-  }
-
-  .checkbox{
-    label{
-      flex-direction: row;
-      align-items: center;
-      gap: 0.5em;
-    }
-  }
-
-  input {
-    width: 249px;
   }
 
   input[type="checkbox"] {
     width: 20px;
+  }
+
+  form {
+    padding: $ruler;
+    width: $ruler * 20;
+    margin: 0 auto;
+  }
+
+  button,
+  input {
+    letter-spacing: -0.2px;
+    font-size: $ruler;
+    border: 0;
+    outline: 0;
+    font-size: $ruler;
+    border-radius: $ruler * 20;
+    padding: $ruler;
+    background-color: $color-bg;
+    text-shadow: 1px 1px 0 $color-white;
+  }
+
+  label {
+    margin: 2em 0em 1em;
+  }
+
+  input {
+    margin-right: $ruler/2;
+    box-shadow: inset 2px 2px 5px $color-shadow,
+      inset -5px -5px 10px $color-white;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+
+    &:focus {
+      box-shadow: inset 1px 1px 2px $color-shadow,
+        inset -1px -1px 2px $color-white;
+    }
+  }
+
+  button {
+    color: #61677c;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+    width: fit-content;
+    align-self: center;
+
+    &:hover {
+      box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+    }
+
+    &:active {
+      box-shadow: inset 1px 1px 2px $color-shadow,
+        inset -1px -1px 2px $color-white;
+    }
+
+    .icon {
+      margin-right: $ruler/2;
+    }
+
+    &.unit {
+      border-radius: $ruler/2;
+      line-height: 0;
+      width: $ruler * 3;
+      height: $ruler * 3;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 $ruler/2;
+      font-size: $ruler * 1.2;
+
+      .icon {
+        margin-right: 0;
+      }
+    }
+
+    &.red {
+      display: block;
+      width: 100%;
+      color: $color-red;
+    }
+  }
+
+  .input-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    label {
+      margin: 0;
+      flex: 1;
+    }
   }
 }

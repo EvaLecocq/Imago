@@ -37,7 +37,7 @@ main {
 
 .article--index {
   div {
-    color:#f3f3f3;
+    color: #f3f3f3;
     border: dashed #3fff00;
     margin: 0 20px;
     .article--title {
@@ -53,5 +53,41 @@ main {
         border-radius: 10px;
       }
     }
+  }
+}
+
+.login {
+  color: white;
+  margin-bottom: 15px;
+  padding: 10px;
+
+  h1{
+    padding: 70px 0px;
+  }
+
+  legend {
+    padding: 10px 3px;
+    font-weight: bold;
+    font-variant: small-caps;
+  }
+
+  label {
+    margin: 6px;
+  }
+
+  .checkbox{
+    label{
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5em;
+    }
+  }
+
+  input {
+    width: 249px;
+  }
+
+  input[type="checkbox"] {
+    width: 20px;
   }
 }

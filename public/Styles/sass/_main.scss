@@ -1,5 +1,10 @@
 @import "mixin";
 
+$ruler: 1rem;
+$color-bg: #ebecf0;
+$color-shadow: #babecc;
+$color-white: #fff;
+
 main {
   padding-left: 4rem;
   .header--title__up {
@@ -28,59 +33,67 @@ main {
 
   .adaptive-img--cover {
     flex: 1 0;
-    padding: 40px 0;
+    padding: 2rem 0;
     span {
-      height: 300px;
+      height: 20rem;
     }
   }
 }
 
 .article--index {
-  color: #f3f3f3;
-  a{
-    color: #f3f3f3;
+  color: $color-bg;
+
+  h1 {
+    padding: 5rem 0;
   }
-  div {
-    color: #f3f3f3;
-    border: dashed #3fff00;
-    margin: 0 20px;
-    .article--title {
-      flex-direction: row;
-      span {
-        flex: 1 0;
-        padding: 100px;
-        margin: 10px;
-        background-color: #f3f3f3;
-        color: black;
-        justify-content: center;
+
+  .article--title {
+    flex-direction: row-reverse;
+    span {
+      flex: 1 0;
+      margin: 1rem;
+      justify-content: center;
+      border-radius: 5rem;
+
+      &:first-child {
+        font-size: 1.5rem;
+      }
+
+      &.article--category {
+        font-size: 0.8rem;
+        background-color: $color-shadow;
+        color: #61677c;
         align-items: center;
-        border-radius: 10px;
+        padding: 0.5rem;
+        max-width: 7rem;
+        height: 0.5rem;
       }
     }
+  }
+
+  a {
+    margin: 1rem 0;
+    color: $color-bg;
+    align-items: end;
+  }
+
+  .article--admin {
+    align-self: center;
+    width: fit-content;
+    padding: 0.3rem;
   }
 }
 
 .login {
-  $ruler: 16px;
-  $color-red: #ae1100;
-  $color-bg: #ebecf0;
-  $color-shadow: #babecc;
-  $color-white: #fff;
-
   color: $color-bg;
 
   h1 {
-    padding: 70px 0px;
-  }
-
-  input[type="checkbox"] {
-    width: 20px;
+    padding: 5rem 0;
   }
 
   form {
     padding: $ruler;
     width: $ruler * 20;
-    margin: 0 auto;
   }
 
   button,
@@ -100,74 +113,15 @@ main {
     margin: 2em 0em 1em;
   }
 
-  input {
-    margin-right: $ruler/2;
-    box-shadow: inset 2px 2px 5px $color-shadow,
-      inset -5px -5px 10px $color-white;
-    width: 100%;
-    box-sizing: border-box;
-    transition: all 0.2s ease-in-out;
-    appearance: none;
-    -webkit-appearance: none;
-
-    &:focus {
-      box-shadow: inset 1px 1px 2px $color-shadow,
-        inset -1px -1px 2px $color-white;
-    }
-  }
-
   button {
+    margin: 2rem 0 2rem;
     color: #61677c;
-    transition: all 0.2s ease-in-out;
     cursor: pointer;
     font-weight: 600;
-    width: fit-content;
     align-self: center;
 
     &:hover {
       box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
-    }
-
-    &:active {
-      box-shadow: inset 1px 1px 2px $color-shadow,
-        inset -1px -1px 2px $color-white;
-    }
-
-    .icon {
-      margin-right: $ruler/2;
-    }
-
-    &.unit {
-      border-radius: $ruler/2;
-      line-height: 0;
-      width: $ruler * 3;
-      height: $ruler * 3;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      margin: 0 $ruler/2;
-      font-size: $ruler * 1.2;
-
-      .icon {
-        margin-right: 0;
-      }
-    }
-
-    &.red {
-      display: block;
-      width: 100%;
-      color: $color-red;
-    }
-  }
-
-  .input-group {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    label {
-      margin: 0;
-      flex: 1;
     }
   }
 }

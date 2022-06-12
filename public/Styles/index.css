@@ -24,7 +24,7 @@ html {
 
 body {
   font-family: "Athiti", sans-serif;
-  font-size: 18px;
+  font-size: 1rem;
   font-style: normal;
   overflow: auto;
   position: relative;
@@ -33,6 +33,9 @@ body {
 body .container {
   padding: 0 10rem;
   margin: 0 auto;
+}
+body .container--article {
+  padding: 0 10rem;
 }
 
 a {
@@ -59,7 +62,7 @@ section {
   text-decoration: none;
   color: black;
   font-size: 2rem;
-  padding: 15px;
+  padding: 0.5rem;
 }
 
 li {
@@ -288,122 +291,84 @@ main .images {
 }
 main .adaptive-img--cover {
   flex: 1 0;
-  padding: 40px 0;
+  padding: 2rem 0;
 }
 main .adaptive-img--cover span {
-  height: 300px;
+  height: 20rem;
 }
 
 .article--index {
-  color: #f3f3f3;
+  color: #ebecf0;
+}
+.article--index h1 {
+  padding: 5rem 0;
+}
+.article--index .article--title {
+  flex-direction: row-reverse;
+}
+.article--index .article--title span {
+  flex: 1 0;
+  margin: 1rem;
+  justify-content: center;
+  border-radius: 5rem;
+}
+.article--index .article--title span:first-child {
+  font-size: 1.5rem;
+}
+.article--index .article--title span.article--category {
+  font-size: 0.8rem;
+  background-color: #babecc;
+  color: #61677c;
+  align-items: center;
+  padding: 0.5rem;
+  max-width: 7rem;
+  height: 0.5rem;
 }
 .article--index a {
-  color: #f3f3f3;
+  margin: 1rem 0;
+  color: #ebecf0;
+  align-items: end;
 }
-.article--index div {
-  color: #f3f3f3;
-  border: dashed #3fff00;
-  margin: 0 20px;
-}
-.article--index div .article--title {
-  flex-direction: row;
-}
-.article--index div .article--title span {
-  flex: 1 0;
-  padding: 100px;
-  margin: 10px;
-  background-color: #f3f3f3;
-  color: black;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
+.article--index .article--admin {
+  align-self: center;
+  width: fit-content;
+  padding: 0.3rem;
 }
 
 .login {
   color: #ebecf0;
 }
 .login h1 {
-  padding: 70px 0px;
-}
-.login input[type=checkbox] {
-  width: 20px;
+  padding: 5rem 0;
 }
 .login form {
-  padding: 16px;
-  width: 320px;
-  margin: 0 auto;
+  padding: 1rem;
+  width: 20rem;
 }
 .login button,
 .login input {
   letter-spacing: -0.2px;
-  font-size: 16px;
+  font-size: 1rem;
   border: 0;
   outline: 0;
-  font-size: 16px;
-  border-radius: 320px;
-  padding: 16px;
+  font-size: 1rem;
+  border-radius: 20rem;
+  padding: 1rem;
   background-color: #ebecf0;
   text-shadow: 1px 1px 0 #fff;
 }
 .login label {
   margin: 2em 0em 1em;
 }
-.login input {
-  margin-right: 8px;
-  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
-  width: 100%;
-  box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
-  appearance: none;
-  -webkit-appearance: none;
-}
-.login input:focus {
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-}
 .login button {
+  margin: 2rem 0 2rem;
   color: #61677c;
-  transition: all 0.2s ease-in-out;
   cursor: pointer;
   font-weight: 600;
-  width: fit-content;
   align-self: center;
 }
 .login button:hover {
   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
-}
-.login button:active {
-  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
-}
-.login button .icon {
-  margin-right: 8px;
-}
-.login button.unit {
-  border-radius: 8px;
-  line-height: 0;
-  width: 48px;
-  height: 48px;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 8px;
-  font-size: 19.2px;
-}
-.login button.unit .icon {
-  margin-right: 0;
-}
-.login button.red {
-  display: block;
-  width: 100%;
-  color: #ae1100;
-}
-.login .input-group {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-.login .input-group label {
-  margin: 0;
-  flex: 1;
 }
 
 /*# sourceMappingURL=index.css.map */

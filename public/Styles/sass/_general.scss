@@ -27,14 +27,17 @@ html {
 
 body {
   font-family: "Athiti", sans-serif;
-  font-size: 18px;
+  font-size: 1rem;
   font-style: normal;
   overflow: auto;
   position: relative;
   background: #222;
   .container {
-  padding: 0 10rem;
+    padding: 0 10rem;
     margin: 0 auto;
+  }
+  .container--article {
+    padding: 0 10rem;
   }
 }
 
@@ -58,7 +61,7 @@ section {
   a {
     @include link;
     font-size: 2rem;
-    padding: 15px;
+    padding: 0.5rem;
   }
 }
 

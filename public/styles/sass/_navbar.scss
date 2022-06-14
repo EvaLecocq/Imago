@@ -5,6 +5,11 @@
   min-width: 4rem;
   z-index: 2;
 
+  div:last-child{
+    position: absolute;
+    bottom: 0;
+  }
+
   .tooltip {
     position: relative;
     display: inline-block;

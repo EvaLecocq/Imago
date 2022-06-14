@@ -1,15 +1,10 @@
 .footer {
-  margin-top: 50px;
+  margin-top: 5rem;
   div {
     flex-direction: row;
     justify-content: flex-end;
     margin: 0 10px;
     @include paragraph;
-
-    .svg-icon:hover {
-      fill: red; /* pour bien voir le test */
-      opacity: 1;
-    }
 
     .svg-icon {
       width: 30px;
@@ -20,6 +15,9 @@
     .svg-icon polygon,
     .svg-icon rect {
       fill: #ffffff;
+      &:hover{
+        fill: #7a7a7a;
+      }
     }
 
     .svg-icon circle {

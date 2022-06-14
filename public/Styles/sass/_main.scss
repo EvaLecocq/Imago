@@ -84,6 +84,33 @@ main {
   }
 }
 
+.gallery--index{
+  color: $color-bg;
+
+  h1 {
+    padding: 5rem 0;
+  }
+
+  .gallery {
+    flex-flow: row wrap;
+    box-sizing: border-box;
+  
+    figure {
+      flex-basis: 33.333%;
+      padding: 0.5rem;
+      cursor: pointer;
+  
+      img {
+        height: auto;
+      }
+  
+      figcaption {
+        display: none;
+      }
+    }
+  }
+}
+
 .login {
   color: $color-bg;
 
@@ -92,6 +119,7 @@ main {
   }
 
   form {
+    align-self: center;
     padding: $ruler;
     width: $ruler * 20;
   }

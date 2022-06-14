@@ -9,7 +9,6 @@
   display: flex;
   flex-direction: column;
   box-sizing: inherit;
-  padding: 0;
   margin: 0;
 }
 
@@ -31,10 +30,6 @@ body {
   background: #222;
 }
 body .container {
-  padding: 0 10rem;
-  margin: 0 auto;
-}
-body .container--article {
   padding: 0 10rem;
 }
 
@@ -135,6 +130,10 @@ li {
   min-width: 4rem;
   z-index: 2;
 }
+.side-nav div:last-child {
+  position: absolute;
+  bottom: 0;
+}
 .side-nav .tooltip {
   position: relative;
   display: inline-block;
@@ -226,7 +225,7 @@ li {
 }
 
 .footer {
-  margin-top: 50px;
+  margin-top: 5rem;
 }
 .footer div {
   flex-direction: row;
@@ -234,11 +233,6 @@ li {
   margin: 0 10px;
   color: #f3f3f3;
   line-height: 1.7;
-}
-.footer div .svg-icon:hover {
-  fill: red;
-  /* pour bien voir le test */
-  opacity: 1;
 }
 .footer div .svg-icon {
   width: 30px;
@@ -248,6 +242,11 @@ li {
 .footer div .svg-icon polygon,
 .footer div .svg-icon rect {
   fill: #ffffff;
+}
+.footer div .svg-icon path:hover,
+.footer div .svg-icon polygon:hover,
+.footer div .svg-icon rect:hover {
+  fill: #7a7a7a;
 }
 .footer div .svg-icon circle {
   stroke: #ffffff;
@@ -335,6 +334,28 @@ main .adaptive-img--cover span {
   padding: 0.3rem;
 }
 
+.gallery--index {
+  color: #ebecf0;
+}
+.gallery--index h1 {
+  padding: 5rem 0;
+}
+.gallery--index .gallery {
+  flex-flow: row wrap;
+  box-sizing: border-box;
+}
+.gallery--index .gallery figure {
+  flex-basis: 33.333%;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+.gallery--index .gallery figure img {
+  height: auto;
+}
+.gallery--index .gallery figure figcaption {
+  display: none;
+}
+
 .login {
   color: #ebecf0;
 }
@@ -342,6 +363,7 @@ main .adaptive-img--cover span {
   padding: 5rem 0;
 }
 .login form {
+  align-self: center;
   padding: 1rem;
   width: 20rem;
 }

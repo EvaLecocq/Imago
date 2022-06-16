@@ -6,12 +6,14 @@
     @include title1;
 
     color: transparent;
-    background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+    background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg")
+      repeat;
     background-position: 40% 50%;
     -webkit-background-clip: text;
-    position:relative;
-    text-align:center;
+    position: relative;
+    text-align: center;
   }
+
   .header--p {
     text-align: right;
     margin-left: 30%;
@@ -25,8 +27,8 @@
     z-index: -1;
   }
   .header--title__up {
-	font-size: 12px;
-	letter-spacing: 0.5rem;
-	text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.5rem;
+    text-transform: uppercase;
   }
 }

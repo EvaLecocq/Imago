@@ -28,7 +28,11 @@ main {
 
   .images {
     flex-direction: row;
-    gap: 5rem;
+    gap: 2rem;
+
+    div {
+      flex: 1 0;
+    }
   }
 
   .adaptive-img--cover {
@@ -84,7 +88,7 @@ main {
   }
 }
 
-.gallery--index{
+.gallery--index {
   color: $color-bg;
 
   h1 {
@@ -94,18 +98,22 @@ main {
   .gallery {
     flex-flow: row wrap;
     box-sizing: border-box;
-  
-    figure {
-      flex-basis: 33.333%;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    .img-container {
+      flex: 25%;
+      max-width: 25%;
       padding: 0.5rem;
-      cursor: pointer;
-  
+
+      overflow: hidden;
+      span:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+      }
       img {
         height: auto;
-      }
-  
-      figcaption {
-        display: none;
       }
     }
   }

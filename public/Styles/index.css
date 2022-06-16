@@ -286,7 +286,10 @@ main p a {
 }
 main .images {
   flex-direction: row;
-  gap: 5rem;
+  gap: 2rem;
+}
+main .images div {
+  flex: 1 0;
 }
 main .adaptive-img--cover {
   flex: 1 0;
@@ -343,17 +346,21 @@ main .adaptive-img--cover span {
 .gallery--index .gallery {
   flex-flow: row wrap;
   box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
 }
-.gallery--index .gallery figure {
-  flex-basis: 33.333%;
+.gallery--index .gallery .img-container {
+  flex: 25%;
+  max-width: 25%;
   padding: 0.5rem;
+  overflow: hidden;
+}
+.gallery--index .gallery .img-container span:hover {
   cursor: pointer;
+  transform: scale(1.2);
 }
-.gallery--index .gallery figure img {
+.gallery--index .gallery .img-container img {
   height: auto;
-}
-.gallery--index .gallery figure figcaption {
-  display: none;
 }
 
 .login {

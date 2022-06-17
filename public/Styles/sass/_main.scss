@@ -78,11 +78,27 @@ main {
     color: $color-bg;
     align-items: end;
   }
+.liste--category{
+  align-items: center;
+  .article--category {
+    flex: 1 0;
+    margin: 1rem;
+    justify-content: center;
+    border-radius: 5rem;
+    background-color: $color-shadow;
+    color: gray;
+    align-items: center;
+    padding: 0.5rem;
+    max-width: 7rem;
+    height: 0.5rem;
+  }
+}
+
 
   .article--admin {
     align-self: center;
     width: fit-content;
-    padding: 0.3rem;
+    margin-top: 1rem;
   }
 }
 
@@ -113,12 +129,11 @@ main {
         &:hover {
           transform: scale(1.2);
         }
-        img{
+        img {
           height: auto;
         }
       }
     }
-
   }
   .modal {
     background: rgba(0, 0, 0, 0.8);
@@ -196,6 +211,24 @@ main {
     &:hover {
       box-shadow: -0.2rem -0.2rem 0.7rem $color-white,
         0.2rem 0.2rem 0.7rem $color-shadow;
+    }
+  }
+
+  .logout {
+    margin: 60% 0;
+    a {
+      border-radius: 20rem;
+      padding: 1rem;
+      background-color: #ebecf0;
+      margin: 2rem 0 2rem;
+      color: #61677c;
+      cursor: pointer;
+      font-weight: 600;
+      align-self: center;
+      &:hover {
+        box-shadow: -0.2rem -0.2rem 0.7rem $color-white,
+          0.2rem 0.2rem 0.7rem $color-shadow;
+      }
     }
   }
 }

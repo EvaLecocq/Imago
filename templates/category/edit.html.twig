@@ -4,15 +4,19 @@
 {% endblock %}
 
 {% block body %}
-	<main class="content">
+	<main>
+		<div class="container">
+			<div class="article--index">
 
-		<h2>Modifier la categorie</h2>
+				<h2>Modifier la categorie</h2>
 
-		{{ include('category/_form.html.twig', {'button_label': 'Update'}) }}
+				{{ include('category/_form.html.twig', {'button_label': 'Update'}) }}
 
-		<a href="{{ path('app_category_index') }}">back to list</a>
+				<a href="{{ path('app_category_index') }}">back to list</a>
 
-		{{ include('category/_delete_form.html.twig') }}
-        
+				{{ include('category/_delete_form.html.twig') }}
+			</div>
+		</div>
+
 		<main>
 		{% endblock %}

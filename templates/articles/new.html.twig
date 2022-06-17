@@ -4,12 +4,16 @@
 {% endblock %}
 
 {% block body %}
-	<main class="content">
+	<main>
+		<div class="container">
+			<div class="article--index">
 
-	<h2>Créer un nouvel article</h2>
+				<h2>Créer un nouvel article</h2>
 
-	{{ include('articles/_form.html.twig') }}
+				{{ include('articles/_form.html.twig') }}
 
-<a href="{{ path('app_articles_index') }}">Retour à la liste d'articles</a>
-<main>
-{% endblock %}
+				<a class="article--admin" href="{{ path('app_articles_index') }}">Retour à la liste d'articles</a>
+			</div>
+		</div>
+		<main>
+		{% endblock %}

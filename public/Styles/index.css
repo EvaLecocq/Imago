@@ -186,10 +186,10 @@ li {
   fill: #ffffff;
 }
 
-.header {
+header {
   margin-bottom: 12rem;
 }
-.header .header--title {
+header .header--title {
   font-family: "Merienda", sans-serif;
   font-size: 15rem;
   margin-top: 10rem;
@@ -203,11 +203,11 @@ li {
   -webkit-background-clip: text;
   position: relative;
 }
-.header .header--p {
+header .header--p {
   text-align: right;
   margin-left: 30%;
 }
-.header .header--title__background {
+header .header--title__background {
   font-family: "Merienda", sans-serif;
   font-size: 15rem;
   margin-top: 10rem;
@@ -220,7 +220,7 @@ li {
   color: rgba(0, 0, 0, 0.2);
   z-index: -1;
 }
-.header .header--title__up {
+header .header--title__up {
   font-size: 12px;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
@@ -329,10 +329,25 @@ main .adaptive-img--cover span {
   color: #ebecf0;
   align-items: end;
 }
+.article--index .liste--category {
+  align-items: center;
+}
+.article--index .liste--category .article--category {
+  flex: 1 0;
+  margin: 1rem;
+  justify-content: center;
+  border-radius: 5rem;
+  background-color: #babecc;
+  color: gray;
+  align-items: center;
+  padding: 0.5rem;
+  max-width: 7rem;
+  height: 0.5rem;
+}
 .article--index .article--admin {
   align-self: center;
   width: fit-content;
-  padding: 0.3rem;
+  margin-top: 1rem;
 }
 
 .gallery--index {
@@ -429,6 +444,22 @@ main .adaptive-img--cover span {
   align-self: center;
 }
 .login button:hover {
+  box-shadow: -0.2rem -0.2rem 0.7rem #fff, 0.2rem 0.2rem 0.7rem #babecc;
+}
+.login .logout {
+  margin: 60% 0;
+}
+.login .logout a {
+  border-radius: 20rem;
+  padding: 1rem;
+  background-color: #ebecf0;
+  margin: 2rem 0 2rem;
+  color: #61677c;
+  cursor: pointer;
+  font-weight: 600;
+  align-self: center;
+}
+.login .logout a:hover {
   box-shadow: -0.2rem -0.2rem 0.7rem #fff, 0.2rem 0.2rem 0.7rem #babecc;
 }
 

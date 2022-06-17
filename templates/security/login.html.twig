@@ -12,7 +12,7 @@
 				{% endif %}
 
 				{% if app.user %}
-					<div class="mb-3">
+					<div class="logout">
 						Voulez-vous vraiment vous déconnectez ?
 						<a href="{{ path('app_logout') }}">Déconnexion</a>
 					</div>
@@ -30,10 +30,8 @@
 					<button type="submit">
 						Valider
 					</button>
-
-				</form>
-
-			{% endif %}
+				{% endif %}
+			</form>
 		</div>
 	</main>
 {% endblock %}

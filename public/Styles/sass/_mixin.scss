@@ -25,15 +25,11 @@
 
 @mixin title3 {
   font-family: "Merienda", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 8rem;
   justify-content: center;
-  display: flex;
-  flex-direction: row;
 }
 
 @mixin paragraph {
-  color: #f3f3f3;
+  color: #ebecf0;
   line-height: 1.7;
 }
 

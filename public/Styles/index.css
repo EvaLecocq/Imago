@@ -233,7 +233,7 @@ li {
   flex-direction: row;
   justify-content: flex-end;
   margin: 0 10px;
-  color: #f3f3f3;
+  color: #ebecf0;
   line-height: 1.7;
 }
 .footer div .svg-icon {
@@ -270,15 +270,11 @@ main h2 {
 }
 main h3 {
   font-family: "Merienda", sans-serif;
-  font-size: 1rem;
-  margin-bottom: 8rem;
   justify-content: center;
-  display: flex;
-  flex-direction: row;
 }
 main .index--text,
 main p {
-  color: #f3f3f3;
+  color: #ebecf0;
   line-height: 1.7;
   margin-bottom: 1rem;
 }
@@ -289,6 +285,7 @@ main p a {
 main .images {
   flex-direction: row;
   gap: 2rem;
+  flex-wrap: wrap;
 }
 main .images div {
   flex: 1 0;
@@ -298,6 +295,7 @@ main .adaptive-img--cover {
   padding: 2rem 0;
 }
 main .adaptive-img--cover span {
+  min-width: 300px;
   height: 20rem;
 }
 
@@ -310,19 +308,17 @@ main .adaptive-img--cover span {
 .article--index .article--title {
   flex-direction: row-reverse;
 }
-.article--index .article--title span {
+.article--index .article--title span,
+.article--index .article--title h3 {
   flex: 1 0;
   margin: 1rem;
   justify-content: center;
   border-radius: 5rem;
 }
-.article--index .article--title span:first-child {
-  font-size: 1.5rem;
-}
-.article--index .article--title span.article--category {
-  font-size: 0.8rem;
+.article--index .article--title span.article--category,
+.article--index .article--title h3.article--category {
   background-color: #babecc;
-  color: #61677c;
+  color: gray;
   align-items: center;
   padding: 0.5rem;
   max-width: 7rem;
@@ -348,16 +344,16 @@ main .adaptive-img--cover span {
 .gallery--index .gallery {
   flex-flow: row wrap;
   box-sizing: border-box;
-  display: flex;
   flex-wrap: wrap;
 }
 .gallery--index .gallery .img-container {
-  flex: 25%;
-  max-width: 25%;
-  padding: 0.5rem;
-  overflow: hidden;
+  padding: 0.7rem 0;
+  flex: 1 25%;
+  align-items: center;
 }
 .gallery--index .gallery .img-container span {
+  min-width: 300px;
+  max-width: 150px;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
@@ -415,15 +411,12 @@ main .adaptive-img--cover span {
 }
 .login button,
 .login input {
-  letter-spacing: -0.2px;
-  font-size: 1rem;
   border: 0;
   outline: 0;
   font-size: 1rem;
   border-radius: 20rem;
   padding: 1rem;
   background-color: #ebecf0;
-  text-shadow: 1px 1px 0 #fff;
 }
 .login label {
   margin: 2em 0em 1em;
@@ -436,7 +429,7 @@ main .adaptive-img--cover span {
   align-self: center;
 }
 .login button:hover {
-  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+  box-shadow: -0.2rem -0.2rem 0.7rem #fff, 0.2rem 0.2rem 0.7rem #babecc;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -29,6 +29,7 @@ main {
   .images {
     flex-direction: row;
     gap: 2rem;
+    flex-wrap: wrap;
 
     div {
       flex: 1 0;
@@ -39,6 +40,7 @@ main {
     flex: 1 0;
     padding: 2rem 0;
     span {
+      min-width: 300px;
       height: 20rem;
     }
   }
@@ -53,20 +55,16 @@ main {
 
   .article--title {
     flex-direction: row-reverse;
-    span {
+    span,
+    h3 {
       flex: 1 0;
       margin: 1rem;
       justify-content: center;
       border-radius: 5rem;
 
-      &:first-child {
-        font-size: 1.5rem;
-      }
-
       &.article--category {
-        font-size: 0.8rem;
         background-color: $color-shadow;
-        color: #61677c;
+        color: gray;
         align-items: center;
         padding: 0.5rem;
         max-width: 7rem;
@@ -98,31 +96,31 @@ main {
   .gallery {
     flex-flow: row wrap;
     box-sizing: border-box;
-
-    display: flex;
     flex-wrap: wrap;
 
     .img-container {
-      flex: 25%;
-      max-width: 25%;
-      padding: 0.5rem;
+      padding: 0.7rem 0;
+      flex: 1 25%;
+      align-items: center;
 
-      overflow: hidden;
       span {
+        min-width: 300px;
+        max-width: 150px;
+
+        //Animation Zoom
         cursor: pointer;
         transition: all 0.3s ease-out;
-
         &:hover {
           transform: scale(1.2);
         }
-
-        img {
+        img{
           height: auto;
         }
       }
     }
+
   }
-  .modal{
+  .modal {
     background: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
@@ -133,24 +131,24 @@ main {
     pointer-events: none;
     transition: 0.25s ease-out;
 
-    &.open{
+    &.open {
       opacity: 1;
       pointer-events: all;
     }
 
-    .full-img{
+    .full-img {
       position: absolute;
       height: 70%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) scale(0.5);
       transition: all 0.25s ease-out;
-      &.open{
+      &.open {
         transform: translate(-50%, -50%) scale(1);
       }
     }
 
-    p{
+    p {
       color: $color-white;
       font-size: 2rem;
       position: absolute;
@@ -176,15 +174,12 @@ main {
 
   button,
   input {
-    letter-spacing: -0.2px;
-    font-size: $ruler;
     border: 0;
     outline: 0;
     font-size: $ruler;
     border-radius: $ruler * 20;
     padding: $ruler;
     background-color: $color-bg;
-    text-shadow: 1px 1px 0 $color-white;
   }
 
   label {
@@ -199,7 +194,8 @@ main {
     align-self: center;
 
     &:hover {
-      box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+      box-shadow: -0.2rem -0.2rem 0.7rem $color-white,
+        0.2rem 0.2rem 0.7rem $color-shadow;
     }
   }
 }

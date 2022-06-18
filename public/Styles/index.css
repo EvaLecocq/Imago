@@ -287,6 +287,14 @@ main .index--text a,
 main p a {
   padding: 0;
 }
+main .adaptive-img--cover {
+  flex: 1 0;
+  padding: 2rem 0;
+}
+main .adaptive-img--cover span {
+  min-width: 300px;
+  height: 20rem;
+}
 main .images {
   flex-direction: row;
   gap: 2rem;
@@ -295,13 +303,14 @@ main .images {
 main .images div {
   flex: 1 0;
 }
-main .adaptive-img--cover {
-  flex: 1 0;
-  padding: 2rem 0;
+main .reveal {
+  opacity: 0;
+  transform: translateY(-30px);
 }
-main .adaptive-img--cover span {
-  min-width: 300px;
-  height: 20rem;
+main .reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 1s;
 }
 
 .article--index {

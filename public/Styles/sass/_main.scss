@@ -247,9 +247,13 @@ main {
   .snakeCanv {
     width: fit-content;
     align-self: center;
+    border: 0.01rem solid #babecc;
   }
   .score {
-    @include title3;
+    font-family: "Merienda", sans-serif;
+    text-align: center;
+    font-size: 5rem;
+    margin: 2.5rem 0;
     color: $color-bg;
   }
 }

@@ -275,9 +275,8 @@ main h2 {
 }
 main h3 {
   font-family: "Merienda", sans-serif;
-  text-align: center;
-  font-size: 5rem;
-  margin: 2.5rem 0;
+  font-size: 1.5rem;
+  margin: 1rem;
 }
 main .index--text,
 main p {
@@ -482,6 +481,7 @@ main .reveal-visible {
 .snake--index .snakeCanv {
   width: fit-content;
   align-self: center;
+  border: 0.01rem solid #babecc;
 }
 .snake--index .score {
   font-family: "Merienda", sans-serif;

@@ -10,7 +10,7 @@
 
 				<h2>Articles</h2>
 
-				<div class="article">
+				<div class="article reveal">
 					{% for article in articles %}
 						<div class="article--title">
 							<h3>{{ article.title }}</h3>
@@ -34,5 +34,4 @@
 			</div>
 		</div>
 		<main>
-			<script src="{{ asset('controller/main.js') }}" type="text/javascript"/>
 		{% endblock %}

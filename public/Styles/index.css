@@ -275,7 +275,9 @@ main h2 {
 }
 main h3 {
   font-family: "Merienda", sans-serif;
-  justify-content: center;
+  text-align: center;
+  font-size: 5rem;
+  margin: 2.5rem 0;
 }
 main .index--text,
 main p {
@@ -477,15 +479,16 @@ main .reveal-visible {
   box-shadow: -0.2rem -0.2rem 0.7rem #fff, 0.2rem 0.2rem 0.7rem #babecc;
 }
 
-.snake--index {
-  padding: 0 0 0 4rem;
-  height: 37rem;
-  border: solid #babecc;
-}
 .snake--index .snakeCanv {
-  overflow: hidden;
-  width: "400";
-  height: "400";
+  width: fit-content;
+  align-self: center;
+}
+.snake--index .score {
+  font-family: "Merienda", sans-serif;
+  text-align: center;
+  font-size: 5rem;
+  margin: 2.5rem 0;
+  color: #ebecf0;
 }
 
 /*# sourceMappingURL=index.css.map */

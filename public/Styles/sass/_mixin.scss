@@ -17,7 +17,9 @@
 
 @mixin title3 {
   font-family: "Merienda", sans-serif;
-  justify-content: center;
+  text-align: center;
+  font-size: 5rem;
+  margin: 2.5rem 0;
 }
 
 @mixin paragraph {

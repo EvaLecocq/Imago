@@ -53,7 +53,7 @@ main {
   .reveal-visible {
     opacity: 1;
     transform: translateY(0);
-    transition: 1s ;
+    transition: 1s;
   }
 }
 
@@ -243,13 +243,13 @@ main {
   }
 }
 
-.snake--index{
-  padding: 0 0 0 4rem;
-  height: 37rem;
-  border: solid $color-shadow;
-  .snakeCanv{
-    overflow: hidden;
-    width:"400";
-    height:"400";
+.snake--index {
+  .snakeCanv {
+    width: fit-content;
+    align-self: center;
+  }
+  .score {
+    @include title3;
+    color: $color-bg;
   }
 }

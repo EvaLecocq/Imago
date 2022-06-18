@@ -1,11 +1,3 @@
-@mixin background {
-  background-color: #444;
-}
-
-@mixin text_C {
-  text-align: center;
-}
-
 @mixin title1 {
   font-family: "Merienda", sans-serif;
   font-size: 15rem;
@@ -41,16 +33,3 @@
   text-decoration: underline;
   color: #000;
 }
-
-@mixin media-min($breakpoints) {
-  @media screen and (min-width: $breakpoints) {
-    & {
-      @content;
-    }
-  }
-}
-
-$breakpoints: (
-  "tablet": 900px,
-  "mobil": 600px,
-)

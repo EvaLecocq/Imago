@@ -33,6 +33,33 @@ body .container {
   padding: 0 10rem;
 }
 
+/* Effect click */
+.clickAnim {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(to top, #ebecf041, #babecc31);
+  position: absolute;
+  z-index: 9000;
+  transform: scale(0);
+  transform-origin: center;
+  animation: clickAnim 0.5s ease-in-out;
+}
+
+@keyframes clickAnim {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+/* Others div */
 a {
   text-decoration: none;
   color: black;
@@ -40,28 +67,6 @@ a {
 a :hover {
   text-decoration: underline;
   color: #000;
-}
-
-section {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-/* Bouton */
-.bouton {
-  background-color: #7e4a7c;
-  max-width: 100px;
-  height: 50px;
-}
-.bouton a {
-  text-decoration: none;
-  color: black;
-  font-size: 2rem;
-  padding: 0.5rem;
-}
-
-li {
-  list-style: none;
 }
 
 .with-border-bottom {

@@ -3,12 +3,13 @@
   div {
     flex-direction: row;
     justify-content: flex-end;
-    margin: 0 10px;
-    @include paragraph;
+    margin: 0 1rem;
+    color: #ebecf0;
+    line-height: 1.7;
 
     .svg-icon {
-      width: 30px;
-      height: 30px;
+      width: 1.7rem;
+      height: 1.7rem;
     }
 
     .svg-icon path,

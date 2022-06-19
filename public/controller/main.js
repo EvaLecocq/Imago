@@ -1,19 +1,3 @@
-//Anim click
-
-window.addEventListener("click", (e) => {
-  const cercle = document.createElement("div");
-  cercle.className = "clickAnim";
-  cercle.style.top = `${e.pageY - 20}px`;
-  cercle.style.left = `${e.pageX - 20}px`;
-  document.body.appendChild(cercle);
-
-  setTimeout(() => {
-    cercle.remove();
-  }, 1500);
-});
-
-//Reveal div
-
 const ratio = 0.1;
 const options = {
   root: null,
@@ -21,15 +5,19 @@ const options = {
   threshold: ratio,
 };
 
-const handleIntersect = (entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.intersectionRatio > ratio) {
-      entry.target.classList.add("reveal-visible");
-      observer.unobserve(entry.target);
+///APPEL FUNCTION CALLBACK///
+const handleIntersect = (appear, observer) => {
+  appear.forEach((reveal) => {
+    if (reveal.intersectionRatio > ratio) {
+      //reveal class div
+      reveal.target.classList.add("reveal-visible");
+      //stop "observer" div
+      observer.unobserve(reveal.target);
     }
   });
 };
 
+///DETECTS COLLISION & DISPLAY AREA///
 const observer = new IntersectionObserver(handleIntersect, options);
 document.querySelectorAll(".reveal").forEach((r) => {
   observer.observe(r);

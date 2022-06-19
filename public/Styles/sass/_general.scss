@@ -71,18 +71,6 @@ a {
   }
 }
 
-.with-border-bottom {
-  position: relative;
-  ::after {
-    content: "";
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    border-bottom: 1.5px dashed black;
-  }
-}
-
 /* *****************************************************************
   IMAGES
   ***************************************************************** */

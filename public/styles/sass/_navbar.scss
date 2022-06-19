@@ -10,35 +10,41 @@
     bottom: 0;
   }
 
+  .nav-bloc {
+    padding: 1.5rem 0;
+    align-self: center;
+    cursor: pointer;
+    border-bottom: 0.01rem solid #f2f2f21e;
+    .svg-icon,
+    .svg-icon path {
+      width: 1.7rem;
+      height: 1.7rem;
+      fill: #ebecf0;
+    }
+  }
+
   .tooltip {
     position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
     .tooltiptext {
       visibility: hidden;
-      width: 120px;
+      width: auto;
+      padding: 0.3rem 0.7rem;
       background-color: #555;
-      color: #fff;
+      color: #ebecf0;
       text-align: center;
-      padding: 5px 0;
-      border-radius: 6px;
+      border-radius: 0.5rem;
 
       position: absolute;
       z-index: 1;
-      bottom: 25%;
-      /* left: 50%; */
-      margin-left: 60px;
-
-      opacity: 0;
-      transition: opacity 0.3s;
+      margin-left: 3.3rem;
     }
     .tooltiptext::after {
       content: "";
       position: absolute;
       top: 50%;
       right: 100%;
-      margin-top: -5px;
-      border-width: 5px;
+      margin-top: -0.3rem;
+      border-width: 0.3rem;
       border-style: solid;
       border-color: transparent #555 transparent transparent;
     }
@@ -46,23 +52,5 @@
   .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-  }
-
-  .nav-bloc {
-    padding: 20px 0;
-    align-self: center;
-    cursor: pointer;
-    border-bottom: 1px solid #f2f2f21e;
-
-    .logo {
-      width: 50px;
-      height: auto;
-    }
-    .svg-icon,
-    .svg-icon path {
-      width: 30px;
-      height: 30px;
-      fill: #ffffff;
-    }
   }
 }

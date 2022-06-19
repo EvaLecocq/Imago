@@ -1,6 +1,5 @@
 @import "mixin";
 
-$ruler: 1rem;
 $color-bg: #ebecf0;
 $color-shadow: #babecc;
 $color-white: #fff;
@@ -19,7 +18,8 @@ main {
 
   .index--text,
   p {
-    @include paragraph;
+    color: $color-bg;
+    line-height: 1.7;
     margin-bottom: 1rem;
     a {
       padding: 0;
@@ -30,7 +30,7 @@ main {
     flex: 1 0;
     padding: 2rem 0;
     span {
-      min-width: 300px;
+      min-width: 20rem;
       height: 20rem;
     }
   }
@@ -48,7 +48,7 @@ main {
   //reveal div
   .reveal {
     opacity: 0;
-    transform: translateY(-30px);
+    transform: translateY(-3rem);
   }
   .reveal-visible {
     opacity: 1;
@@ -59,10 +59,6 @@ main {
 
 .article--index {
   color: $color-bg;
-
-  h1 {
-    padding: 5rem 0;
-  }
 
   .article--title {
     flex-direction: row-reverse;
@@ -89,6 +85,7 @@ main {
     color: $color-bg;
     align-items: end;
   }
+
   .liste--category {
     align-items: center;
     .article--category {
@@ -115,14 +112,8 @@ main {
 .gallery--index {
   color: $color-bg;
 
-  h1 {
-    padding: 5rem 0;
-  }
-
   .gallery {
     flex-flow: row wrap;
-    box-sizing: border-box;
-    flex-wrap: wrap;
 
     .img-container {
       padding: 0.7rem 0;
@@ -130,11 +121,9 @@ main {
       align-items: center;
 
       span {
-        min-width: 300px;
-        max-width: 150px;
-
-        //Animation Zoom
+        min-width: 20rem;
         cursor: pointer;
+        //Animation Zoom
         transition: all 0.3s ease-out;
         &:hover {
           transform: scale(1.2);
@@ -184,31 +173,26 @@ main {
   }
 }
 
-.login {
+.login--index {
   color: $color-bg;
-
-  h1 {
-    padding: 5rem 0;
-  }
 
   form {
     align-self: center;
-    padding: $ruler;
-    width: $ruler * 20;
+    width: 1rem * 20;
+  }
+
+  label {
+    margin: 2em 0em 1em;
   }
 
   button,
   input {
     border: 0;
     outline: 0;
-    font-size: $ruler;
-    border-radius: $ruler * 20;
-    padding: $ruler;
+    font-size: 1rem;
+    border-radius: 1rem * 20;
+    padding: 1rem;
     background-color: $color-bg;
-  }
-
-  label {
-    margin: 2em 0em 1em;
   }
 
   button {
@@ -225,7 +209,7 @@ main {
   }
 
   .logout {
-    margin: 60% 0;
+    margin: 70% 0;
     a {
       border-radius: 20rem;
       padding: 1rem;
@@ -244,6 +228,7 @@ main {
 }
 
 .snake--index {
+  margin-left: 4rem;
   .snakeCanv {
     width: fit-content;
     align-self: center;

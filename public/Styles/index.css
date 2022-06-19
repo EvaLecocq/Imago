@@ -69,18 +69,6 @@ a :hover {
   color: #000;
 }
 
-.with-border-bottom {
-  position: relative;
-}
-.with-border-bottom ::after {
-  content: "";
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  border-bottom: 1.5px dashed black;
-}
-
 /* *****************************************************************
   IMAGES
   ***************************************************************** */
@@ -139,56 +127,46 @@ a :hover {
   position: absolute;
   bottom: 0;
 }
+.side-nav .nav-bloc {
+  padding: 1.5rem 0;
+  align-self: center;
+  cursor: pointer;
+  border-bottom: 0.01rem solid #f2f2f21e;
+}
+.side-nav .nav-bloc .svg-icon,
+.side-nav .nav-bloc .svg-icon path {
+  width: 1.7rem;
+  height: 1.7rem;
+  fill: #ebecf0;
+}
 .side-nav .tooltip {
   position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
 }
 .side-nav .tooltip .tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: auto;
+  padding: 0.3rem 0.7rem;
   background-color: #555;
-  color: #fff;
+  color: #ebecf0;
   text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+  border-radius: 0.5rem;
   position: absolute;
   z-index: 1;
-  bottom: 25%;
-  /* left: 50%; */
-  margin-left: 60px;
-  opacity: 0;
-  transition: opacity 0.3s;
+  margin-left: 3.3rem;
 }
 .side-nav .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
   top: 50%;
   right: 100%;
-  margin-top: -5px;
-  border-width: 5px;
+  margin-top: -0.3rem;
+  border-width: 0.3rem;
   border-style: solid;
   border-color: transparent #555 transparent transparent;
 }
 .side-nav .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
-}
-.side-nav .nav-bloc {
-  padding: 20px 0;
-  align-self: center;
-  cursor: pointer;
-  border-bottom: 1px solid #f2f2f21e;
-}
-.side-nav .nav-bloc .logo {
-  width: 50px;
-  height: auto;
-}
-.side-nav .nav-bloc .svg-icon,
-.side-nav .nav-bloc .svg-icon path {
-  width: 30px;
-  height: 30px;
-  fill: #ffffff;
 }
 
 header {
@@ -206,27 +184,13 @@ header .header--title {
   background-position: 40% 50%;
   background-clip: text;
   -webkit-background-clip: text;
-  position: relative;
 }
 header .header--p {
   text-align: right;
   margin-left: 30%;
 }
-header .header--title__background {
-  font-family: "Merienda", sans-serif;
-  font-size: 15rem;
-  margin-top: 10rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  text-shadow: 3rem 3rem 1.5rem #0000005e;
-  position: absolute;
-  left: 250px;
-  bottom: 150px;
-  color: rgba(0, 0, 0, 0.2);
-  z-index: -1;
-}
 header .header--title__up {
-  font-size: 12px;
+  font-size: 0.7rem;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
 }
@@ -237,13 +201,13 @@ header .header--title__up {
 .footer div {
   flex-direction: row;
   justify-content: flex-end;
-  margin: 0 10px;
+  margin: 0 1rem;
   color: #ebecf0;
   line-height: 1.7;
 }
 .footer div .svg-icon {
-  width: 30px;
-  height: 30px;
+  width: 1.7rem;
+  height: 1.7rem;
 }
 .footer div .svg-icon path,
 .footer div .svg-icon polygon,
@@ -293,7 +257,7 @@ main .adaptive-img--cover {
   padding: 2rem 0;
 }
 main .adaptive-img--cover span {
-  min-width: 300px;
+  min-width: 20rem;
   height: 20rem;
 }
 main .images {
@@ -306,7 +270,7 @@ main .images div {
 }
 main .reveal {
   opacity: 0;
-  transform: translateY(-30px);
+  transform: translateY(-3rem);
 }
 main .reveal-visible {
   opacity: 1;
@@ -316,9 +280,6 @@ main .reveal-visible {
 
 .article--index {
   color: #ebecf0;
-}
-.article--index h1 {
-  padding: 5rem 0;
 }
 .article--index .article--title {
   flex-direction: row-reverse;
@@ -368,13 +329,8 @@ main .reveal-visible {
 .gallery--index {
   color: #ebecf0;
 }
-.gallery--index h1 {
-  padding: 5rem 0;
-}
 .gallery--index .gallery {
   flex-flow: row wrap;
-  box-sizing: border-box;
-  flex-wrap: wrap;
 }
 .gallery--index .gallery .img-container {
   padding: 0.7rem 0;
@@ -382,8 +338,7 @@ main .reveal-visible {
   align-items: center;
 }
 .gallery--index .gallery .img-container span {
-  min-width: 300px;
-  max-width: 150px;
+  min-width: 20rem;
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
@@ -428,19 +383,18 @@ main .reveal-visible {
   transform: translate(-50%, -5%);
 }
 
-.login {
+.login--index {
   color: #ebecf0;
 }
-.login h1 {
-  padding: 5rem 0;
-}
-.login form {
+.login--index form {
   align-self: center;
-  padding: 1rem;
   width: 20rem;
 }
-.login button,
-.login input {
+.login--index label {
+  margin: 2em 0em 1em;
+}
+.login--index button,
+.login--index input {
   border: 0;
   outline: 0;
   font-size: 1rem;
@@ -448,23 +402,20 @@ main .reveal-visible {
   padding: 1rem;
   background-color: #ebecf0;
 }
-.login label {
-  margin: 2em 0em 1em;
-}
-.login button {
+.login--index button {
   margin: 2rem 0 2rem;
   color: #61677c;
   cursor: pointer;
   font-weight: 600;
   align-self: center;
 }
-.login button:hover {
+.login--index button:hover {
   box-shadow: -0.2rem -0.2rem 0.7rem #fff, 0.2rem 0.2rem 0.7rem #babecc;
 }
-.login .logout {
-  margin: 60% 0;
+.login--index .logout {
+  margin: 70% 0;
 }
-.login .logout a {
+.login--index .logout a {
   border-radius: 20rem;
   padding: 1rem;
   background-color: #ebecf0;
@@ -474,10 +425,13 @@ main .reveal-visible {
   font-weight: 600;
   align-self: center;
 }
-.login .logout a:hover {
+.login--index .logout a:hover {
   box-shadow: -0.2rem -0.2rem 0.7rem #fff, 0.2rem 0.2rem 0.7rem #babecc;
 }
 
+.snake--index {
+  margin-left: 4rem;
+}
 .snake--index .snakeCanv {
   width: fit-content;
   align-self: center;

@@ -12,23 +12,15 @@ header {
     background-position: 40% 50%;
     background-clip: text;
     -webkit-background-clip: text;
-    position: relative;
   }
 
   .header--p {
     text-align: right;
     margin-left: 30%;
   }
-  .header--title__background {
-    @include title1;
-    position: absolute;
-    left: 250px;
-    bottom: 150px;
-    color: rgba(0, 0, 0, 0.2);
-    z-index: -1;
-  }
+  
   .header--title__up {
-    font-size: 12px;
+    font-size: 0.7rem;
     letter-spacing: 0.5rem;
     text-transform: uppercase;
   }

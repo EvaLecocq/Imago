@@ -3,6 +3,7 @@ const previews = document.querySelectorAll(".gallery img");
 const img = document.querySelector(".full-img");
 const imgText = document.querySelector(".caption");
 
+///OPEN IMAGE ON CLICK///
 previews.forEach((preview) => {
   preview.addEventListener("click", () => {
     modal.classList.add("open");
@@ -15,9 +16,9 @@ previews.forEach((preview) => {
   });
 });
 
+///REMOVE IMAGE ON CLICK///
 modal.addEventListener("click", (e) => {
   if (e.target.classList.contains("modal")) {
     modal.classList.remove("open");
-    img.classList.add("open");
   }
 });

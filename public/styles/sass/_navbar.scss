@@ -5,7 +5,7 @@
   min-width: 4rem;
   z-index: 2;
 
-  div:last-child{
+  div:last-child {
     position: absolute;
     bottom: 0;
   }
@@ -52,5 +52,27 @@
   .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
+  }
+
+  .tooltipContact {
+    align-items: center;
+    .fixtext {
+      display: none;
+      padding: 0.3rem 0.7rem;
+      background-color: #555;
+      border-radius: 0.5rem;
+    }
+
+    a {
+      margin: 0.5rem 0;
+    }
+  }
+  .tooltipContact:hover .fixtext {
+    display: block;
+  }
+
+  .fixtext a:hover {
+    border-radius: 2rem;
+    background-color: RGBa(200, 200, 200, 0.5);
   }
 }

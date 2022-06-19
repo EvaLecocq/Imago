@@ -168,6 +168,25 @@ a :hover {
   visibility: visible;
   opacity: 1;
 }
+.side-nav .tooltipContact {
+  align-items: center;
+}
+.side-nav .tooltipContact .fixtext {
+  display: none;
+  padding: 0.3rem 0.7rem;
+  background-color: #555;
+  border-radius: 0.5rem;
+}
+.side-nav .tooltipContact a {
+  margin: 0.5rem 0;
+}
+.side-nav .tooltipContact:hover .fixtext {
+  display: block;
+}
+.side-nav .fixtext a:hover {
+  border-radius: 2rem;
+  background-color: RGBa(200, 200, 200, 0.5);
+}
 
 header {
   margin-bottom: 12rem;
@@ -195,33 +214,30 @@ header .header--title__up {
   text-transform: uppercase;
 }
 
-.footer {
-  margin-top: 5rem;
+header {
+  margin-bottom: 12rem;
 }
-.footer div {
-  flex-direction: row;
-  justify-content: flex-end;
-  margin: 0 1rem;
-  color: #ebecf0;
-  line-height: 1.7;
+header .header--title {
+  font-family: "Merienda", sans-serif;
+  font-size: 15rem;
+  margin-top: 10rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  text-shadow: 3rem 3rem 1.5rem #0000005e;
+  color: transparent;
+  background: url("https://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+  background-position: 40% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
-.footer div .svg-icon {
-  width: 1.7rem;
-  height: 1.7rem;
+header .header--p {
+  text-align: right;
+  margin-left: 30%;
 }
-.footer div .svg-icon path,
-.footer div .svg-icon polygon,
-.footer div .svg-icon rect {
-  fill: #ffffff;
-}
-.footer div .svg-icon path:hover,
-.footer div .svg-icon polygon:hover,
-.footer div .svg-icon rect:hover {
-  fill: #7a7a7a;
-}
-.footer div .svg-icon circle {
-  stroke: #ffffff;
-  stroke-width: 1;
+header .header--title__up {
+  font-size: 0.7rem;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
 }
 
 main {
@@ -393,6 +409,7 @@ main .reveal-visible {
 
 .login--index {
   color: #ebecf0;
+  margin-left: 4rem;
 }
 .login--index form {
   align-self: center;
@@ -421,7 +438,7 @@ main .reveal-visible {
   box-shadow: -0.2rem -0.2rem 0.7rem #fff, 0.2rem 0.2rem 0.7rem #babecc;
 }
 .login--index .logout {
-  margin: 70% 0;
+  margin: 90% 0;
 }
 .login--index .logout a {
   border-radius: 20rem;

@@ -184,6 +184,7 @@ main {
 
 .login--index {
   color: $color-bg;
+  margin-left: 4rem;
 
   form {
     align-self: center;
@@ -218,7 +219,7 @@ main {
   }
 
   .logout {
-    margin: 70% 0;
+    margin: 90% 0;
     a {
       border-radius: 20rem;
       padding: 1rem;

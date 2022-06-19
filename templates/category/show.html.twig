@@ -1,25 +1,30 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Category{% endblock %}
-
-{% block main %}
-	<main class="content">
-
-    <h2>Categorie</h2>
-
-    <table class="table">
-        <tbody>
-            <tr>
-                <th>Name</th>
-                <td>{{ category.name }}</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <a href="{{ path('app_category_index') }}">Retourner à la liste</a>
-
-    <a href="{{ path('app_category_edit', {'id': category.id}) }}">Editer</a>
-
-    {{ include('category/_delete_form.html.twig') }}
-    <main>
+{% block title %}Imago - Catégories
 {% endblock %}
+
+{% block body %}
+	<main>
+		<div class="container">
+			<div class="article--index">
+				<h2>Catégorie</h2>
+
+				<table class="table">
+					<tbody>
+						<tr>
+							<th>Name</th>
+							<td>{{ category.name }}</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<a href="{{ path('app_category_index') }}">Retourner à la liste</a>
+
+				<a href="{{ path('app_category_edit', {'id': category.id}) }}">Editer</a>
+
+				{{ include('category/_delete_form.html.twig') }}
+			</div>
+		</div>
+
+		<main>
+		{% endblock %}

@@ -3,6 +3,6 @@
     <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ category.id) }}">
     <button class="article--admin">Supprimer</button>
     {% else %}
-        <p>Vous ne pouvez pas supprimer cette catégorie car elle est lier a un article</p>
+        <p>Vous ne pouvez pas supprimer cette catégorie car elle est liée à un article</p>
     {% endif %}
 </form>
